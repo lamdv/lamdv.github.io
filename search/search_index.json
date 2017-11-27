@@ -2,23 +2,23 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Welcome to MkDocs"
+            "text": "My Personal Website/Blog thinggy\n\n\nMy name is Lam, Dang. I'm a research intern/coder at USTH ICTLab, VAST (Vietnam). My speciality is in Software Engineering, Artificial Intelligence and Data Mining. Currently I am working on an bioinformatic project, developing an engine to query from multiple genomics database.\n\n\nBeside working in informatics, I am also the founder of a Fab Lab and Technology Club at USTH. Currently our fleet of machinary including 2 3D printers and several hand tools. Our project currently including machine building and a hydroponic project.\n\n\nInformatics\n\n\nFabrication",
+            "title": "My Personal Website/Blog thinggy"
         },
         {
-            "location": "/#welcome-to-mkdocs",
-            "text": "For full documentation visit  mkdocs.org .",
-            "title": "Welcome to MkDocs"
+            "location": "/#my-personal-websiteblog-thinggy",
+            "text": "My name is Lam, Dang. I'm a research intern/coder at USTH ICTLab, VAST (Vietnam). My speciality is in Software Engineering, Artificial Intelligence and Data Mining. Currently I am working on an bioinformatic project, developing an engine to query from multiple genomics database.  Beside working in informatics, I am also the founder of a Fab Lab and Technology Club at USTH. Currently our fleet of machinary including 2 3D printers and several hand tools. Our project currently including machine building and a hydroponic project.",
+            "title": "My Personal Website/Blog thinggy"
         },
         {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/#informatics",
+            "text": "",
+            "title": "Informatics"
         },
         {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/#fabrication",
+            "text": "",
+            "title": "Fabrication"
         },
         {
             "location": "/Scientific Journey/",
