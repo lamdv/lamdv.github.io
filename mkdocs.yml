@@ -1,0 +1,5 @@
+site_name: Liam
+site_url: https://lamdv.github.io/
+theme: material 
+repo_url: https://github.com/lamdv/lamdv.github.io
+remote_branch: master
