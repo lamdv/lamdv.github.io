@@ -42,4 +42,4 @@ Hiện tại cấu trúc máy truy vấn ổn định được thực hiện the
 
 Kết thúc giai đoạn này của dự án, ta đã có thể truy cập các cơ sở dữ liệu với độ ổn định và đồng nhất cao cả về kết quả trả về lẫn hiệu năng truy xuất. Nền tảng này cũng dễ dàng được đưa vào áp dụng trong các bài toán khác ngoài ngành Tin sinh học.
 
-Bài tiếp theo sẽ nói về R và các bài đầu tiên liên quan đến R. Giờ thì nghỉ thôi ;)
+Bài tiếp theo sẽ nói về R và các bài đầu tiên liên quan đến R. Giờ thì nghỉ thôi :wink:
