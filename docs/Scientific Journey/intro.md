@@ -1,5 +1,7 @@
 # Hành trình khoa học: Python và R
 
+![My Banner](../img/banner.JPG "this is my favorite photo from Boston, MA, USA")
+
 Trong nỗ lực mới nhất của Lâm để tách rời mặt học tập/học thuật và cuộc sống nội tâm, đây là một sự thụt lùi tai hại.
 
 Từ giờ đến khi sinh nhật 23 tuổi của bản thân, mình sẽ đặt mục tiêu mỗi ngày (cố gắng) viết ít ra 1 bài, và công việc lớn nhất mình đang cần phải làm là nghiên cứu. Dĩ nhiên, một ngày thì có 24 chứ không phải 48 tiếng đồng hồ, và một người mỗi ngày chỉ có thể có từng đấy thời gian để ngồi đọc và viết. Vì vậy, tốt nhất là viết về cái mình đang đọc, vừa để ghi nhớ vừa để lấy thêm cảm hứng mà ngồi... viết. Một chút về công việc hiện tại. Nói cho oai, mình là một researcher ở ICTLab trường USTH. Nói chuẩn ra mình là một thợ code cho thầy Pierre để lấy tiền và cơ hội sang bển :)). Các phần code liên quan đến sử dụng công cụ ICT trong tin sinh học, cụ thể là gì thì... mình cũng chẳng biết ha ha.
