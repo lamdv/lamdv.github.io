@@ -7,3 +7,9 @@ theme:
 remote_branch: master
 docs_dir: docs
 site_dir: site
+pages:
+  - Home: 'index.md'
+  - Scientific Journey:
+    - 'Hành trình khoa học: Python và R': 'Scientific Journey\\intro.md'
+    - '(Những) ngày đầu tiên': 'Scientific Journey\\day-one-ish.md'
+    #- 'Tiếp cận với R': 'Scientific Journey\\day-two-intro-r.md'
