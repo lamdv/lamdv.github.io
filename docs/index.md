@@ -1,3 +1,5 @@
+![My Banner](banner.jpg "this is my favorite photo from Boston, MA, USA")
+
 # My Personal Website/Blog thinggy
 
 My name is Lam, Dang. I'm a research intern/coder at USTH's ICTLab, VAST (Vietnam). My speciality is in Software Engineering, Artificial Intelligence and Data Mining. Currently I am working on a bioinformatic project, developing an engine to query from multiple genomics database.

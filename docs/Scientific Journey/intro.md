@@ -8,6 +8,6 @@ Từ giờ đến khi sinh nhật 23 tuổi của bản thân, mình sẽ đặt
 
 Vì yêu cầu của công việc trong dự án, từ ngày hôm nay mình sẽ bắt đầu cày cuốc R đến khi nào R và Python của mình đạt được tình độ tương đối đồng nhất với nhau. Giống như tay trái và tay phải vậy, nhưng mình là người thuận cả 2 tay.
 
-Các tài liệu, reference và ví dụ sẽ sử dụng bộ công cụ R chuẩn, chạy trên RStudio trên nền Windows 10. Tài liệu tham khảo chính sẽ là R for Data Science của Hadley (ông trùm ngành R).
+Các tài liệu, reference và ví dụ sẽ sử dụng bộ công cụ R chuẩn, chạy trên RStudio trên nền Windows 10. Tài liệu tham khảo chính sẽ là R for Data Science của Hadley (ông trùm ngành R) đối với R và How to think like a Computer Scientist đối với Python.
 
-Let's the journey begin.
+***Let's the journey begin.***
