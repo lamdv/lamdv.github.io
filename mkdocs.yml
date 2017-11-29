@@ -15,6 +15,9 @@ pages:
     - 'Hành trình khoa học: Python và R': 'Scientific Journey\\intro.md'
     - '(Những) ngày đầu tiên': 'Scientific Journey\\day-one-ish.md'
     #- 'Tiếp cận với R': 'Scientific Journey\\day-two-intro-r.md'
+  - Thought:
+    - 'Nov 28 2017': 'Thought\\nov-28-17.md'
 markdown_extensions:
     - pymdownx.emoji:
         emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - mdx_math
