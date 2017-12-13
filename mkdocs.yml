@@ -14,10 +14,11 @@ pages:
   - Scientific Journey:
     - 'Hành trình khoa học: Python và R': 'Scientific Journey\\intro.md'
     - '(Những) ngày đầu tiên': 'Scientific Journey\\day-one-ish.md'
-    #- 'Tiếp cận với R': 'Scientific Journey\\day-two-intro-r.md'
+    - 'Ghi chú bằng Markdown': 'Scientific Journey\\day-two-documentation-markdown.md'
   - Thought:
-    - 'Nov 28 2017': 'Thought\\nov-28-17.md'
+  #   - 'Nov 28 2017': 'Thought\\nov-28-17.md'
+  #   - 'Mỏi': 'Thought\\tiresome.md'
+    - 'The Death of Expertise' : 'Thought\\The Death of Expertise.md'
 markdown_extensions:
     - pymdownx.emoji:
         emoji_generator: !!python/name:pymdownx.emoji.to_svg
-    - mdx_math

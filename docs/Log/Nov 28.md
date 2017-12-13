@@ -24,4 +24,3 @@
 ## Seminar
 
 1. Heterogeneity of databases
-    
