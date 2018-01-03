@@ -2,7 +2,7 @@
 
 Okay, vậy là mình đã không thành công (lắm) trong mục tiêu viết bài trước ngày sinh nhật mình (thật ra cũng viết nhiều hơn số post lên đây). Một số lý do và bài học là:
 
-1. Đầu tiên là do mình đã rất bận rộn trong thời gian một tháng vừa rồi. Đây là một lý do cũ mèm và cổ lỗ nhưng rất thật. Giữa việc nghiên cứu tại ICTLab - IRD, nghiên cứu tại FabLab USTH, quản trị và hướng dẫn các em mới vào FabLab, hướng dẫn các bạn Biologist, thời gian dành cho bản thân mình khoogn có nhiều. Phần lớn thời gian riêng này mình dành cho bạn gái mình.
+1. Đầu tiên là do mình đã rất bận rộn trong thời gian một tháng vừa rồi. Đây là một lý do cũ mèm và cổ lỗ nhưng rất thật. Giữa việc nghiên cứu tại ICTLab - IRD, nghiên cứu tại FabLab USTH, quản trị và hướng dẫn các em mới vào FabLab, hướng dẫn các bạn Biologist, thời gian dành cho bản thân mình khoong có nhiều. Phần lớn thời gian riêng này mình dành cho bạn gái mình.
 
 1. Thành thực mà nói, động lực để viết của mình giảm sút trong thời gian vừa qua. Một lý do lớn để mình bắt đầu viết là do sự mất cân bằng và bí bách trong cuộc sống nội tâm dẫn đến nhu cầu giải tỏa ra bên ngoài. Nói vậy không có nghĩa là kể lể hay không buồn chán là sẽ không viết. Tuy vậy giữa một lịch công việc chật chội và tâm trí bị chiếm dụng (bởi lịch công việc trên), người ta cũng khó có thể ngồi viết một bài ra hồn.
 
