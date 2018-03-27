@@ -12,7 +12,7 @@ But democracy, as I wrote in an essay about C.S. Lewis and the Snowden affair, d
 
 I fear we are witnessing the *death of expertise*: a Google-fueled, Wikipedia-based, blog-sodden collapse of any division between professionals and laymen, students and teachers, knowers and wonderers – in other words, between those of any achievement in an area and those with none at all. By this, I do not mean the death of actual expertise, the knowledge of specific things that sets some people apart from others in various areas. There will always be doctors, lawyers, engineers, and other specialists in various fields. Rather, what I fear has died is any acknowledgement of expertise as anything that should alter our thoughts or change the way we live.
 
-    What has died is any acknowledgement of expertise as anything that should alter our thoughts or change the way we live.
+>What has died is any acknowledgement of expertise as anything that should alter our thoughts or change the way we live.
 
 This is a very bad thing. Yes, it’s true that experts can make mistakes, as disasters from thalidomide to the Challenger explosion tragically remind us. But mostly, experts have a pretty good batting average compared to laymen: doctors, whatever their errors, seem to do better with most illnesses than faith healers or your Aunt Ginny and her special chicken gut poultice. To reject the notion of expertise, and to replace it with a sanctimonious insistence that every person has a right to his or her own opinion, is silly.
 
@@ -26,7 +26,7 @@ In politics, too, the problem has reached ridiculous proportions. People in poli
 
 Critics might dismiss all this by saying that everyone has a right to participate in the public sphere. That’s true. But every discussion must take place within limits and above a certain baseline of competence. And competence is sorely lacking in the public arena. People with strong views on going to war in other countries can barely find their own nation on a map; people who want to punish Congress for this or that law can’t name their own member of the House.
 
-    People with strong views on going to war in other countries can barely find their own nation on a map.
+>People with strong views on going to war in other countries can barely find their own nation on a map.
 
 None of this ignorance stops people from arguing as though they are research scientists. Tackle a complex policy issue with a layman today, and you will get snippy and sophistic demands to show ever increasing amounts of *proof* or *evidence* for your case, even though the ordinary interlocutor in such debates isn’t really equipped to decide what constitutes *evidence* or to know it when it’s presented. The use of evidence is a specialized form of knowledge that takes a long time to learn, which is why articles and books are subjected to *peer review* and not to *everyone review,* but don’t tell that to someone hectoring you about the how things really work in Moscow or Beijing or Washington.
 
@@ -36,7 +36,7 @@ This subverts any real hope of a conversation, because it is simply exhausting �
 
  This was both good and bad. While it strained out the kook factor in discussions (editors controlled their letters pages, which today would be called *moderating*), it also meant that sometimes public policy debate was too esoteric, conducted less for public enlightenment and more as just so much dueling jargon between experts.
 
-    If experts go back to only talking to each other, that’s bad for democracy.
+>If experts go back to only talking to each other, that’s bad for democracy.
 
 No one — not me, anyway — wants to return to those days. I like the 21st century, and I like the democratization of knowledge and the wider circle of public participation. That greater participation, however, is endangered by the utterly illogical insistence that every opinion should have equal weight, because people like me, sooner or later, are forced to tune out people who insist that we’re all starting from intellectual scratch. (Spoiler: We’re not.) And if that happens, experts will go back to only talking to each other. And that’s bad for democracy.
 
@@ -50,7 +50,7 @@ Now, anyone can bum rush the comments section of any major publication. Sometime
 
 Another reason for the collapse of expertise lies not with the global commons but with the increasingly partisan nature of U.S. political campaigns. There was once a time when presidents would win elections and then scour universities and think-tanks for a brain trust; that’s how Henry Kissinger, Samuel Huntington, Zbigniew Brzezinski and others ended up in government service while moving between places like Harvard and Columbia.
 
-    This is the code of the samurai, not the intellectual, and it privileges the campaign loyalist over the expert.
+>This is the code of the samurai, not the intellectual, and it privileges the campaign loyalist over the expert.
 
 [Those days are gone](http://www.washingtonpost.com/wp-dyn/content/article/2009/04/12/AR2009041202260.html). To be sure, some of the blame rests with the increasing irrelevance of overly narrow research in the social sciences. But it is also because the primary requisite of seniority in the policy world is too often an answer to the question: *What did you do during the campaign?* This is the code of the samurai, not the intellectual, and it privileges the campaign loyalist over the expert.
 

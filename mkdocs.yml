@@ -18,8 +18,9 @@ pages:
   - Thought:
   #   - 'Nov 28 2017': 'Thought\\nov-28-17.md'
   #   - 'Mỏi': 'Thought\\tiresome.md'
-    - 'The Death of Expertise' : 'Thought\\The Death of Expertise.md'
+    - 'The Death of Expertise' : 'Thought\\the-death-of-expertise.md'
     - 'Về chuyện viết lách' : 'Thought\\on-writing.md'
 markdown_extensions:
-    - pymdownx.emoji:
-        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    # - pymdownx.emoji:
+    #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - mdx_math 
