@@ -8,7 +8,7 @@ Từ giờ đến khi sinh nhật 23 tuổi của bản thân, mình sẽ đặt
 
 2 công cụ chính của mình và của rất nhiều dự án Khoa học Dữ liệu (Data Science) là R và Python. Cá nhân mình là người đã khá có kinh nghiệm sử dụng Python trong thời gian khá lâu, nhưng R là một thứ khác hẳn. Không như Python, một ngôn ngữ đa dụng (general purpose), R là một công cụ khá đặc trưng cho ngành khoa học dữ liệu. Tất cả mọi thứ liên quan đển R đều nhằm 1 mục tiêu: khai phá dữ liệu. Vì vậy R là một công cụ tuyệt vời cho một trường hợp cụ thể của một ngành khoa học cụ thể. Các giới hạn về khả năng ứng dụng của R trong các bài toán khác bỗng trở nên không quan trọng.
 
-(Nói như vậy không phải là R không thể làm được những việc khác. Ông nội Hadley viết cả mấy quyển sách về R được dàn trang bằng... R, sử dụng RMarkdown và Bookdown, 2 package chính ổng phát triển cho R. Ngoài ra cũng có thể sử dụng Sparkling để viết web service cho các routine R, khá là hữu dụng để đưa các nghiên cứu R vào áp dụng thực tế)
+(Nói như vậy không phải là R không thể làm được những việc khác. Ông nội Hadley viết cả mấy quyển sách về R được dàn trang bằng... R, sử dụng RMarkdown và Bookdown, 2 package chính ổng phát triển cho R. Ngoài ra cũng có thể sử dụng Sparkling để viết web service cho các routine R, khá là hữu dụng để đưa các nghiên cứu R vào áp dụng thực tế.
 
 Vì yêu cầu của công việc trong dự án, từ ngày hôm nay mình sẽ bắt đầu cày cuốc R đến khi nào R và Python của mình đạt được tình độ tương đối đồng nhất với nhau. Giống như tay trái và tay phải vậy, nhưng mình là người thuận cả 2 tay.
 
