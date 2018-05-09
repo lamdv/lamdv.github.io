@@ -1,0 +1,103 @@
+PWD c:/Users/XPS 15-9550/Git/Writing/docs/Template
+INPUT C:/Users/XPS 15-9550/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex
+OUTPUT cover_letter_3.log
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/newlfm/newlfm.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/newlfm/newlfm.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/newlfm/setdim.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/newlfm/setdim.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fancyhdr/fancyhdr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fancyhdr/fancyhdr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/eso-pic/eso-pic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/eso-pic/eso-pic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/atbegshi.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/atbegshi.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/setspace/setspace.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/setspace/setspace.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lastpage/lastpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lastpage/lastpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/calc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/calc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/rotating.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/rotating.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/letter.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/letter.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/newlfm/addrset.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/newlfm/addrset.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/afterpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/afterpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/afterpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/envlab/envlab.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/envlab/envlab.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/envlab/envlab.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/envlab/envlab.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/envlab/envlab.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/charter.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/charter.sty
+INPUT logo.png
+INPUT ./logo.png
+OUTPUT cover_letter_3.pdf
+INPUT ./logo.png
+INPUT ./logo.png
+INPUT ./logo.png
+INPUT cover_letter_3.aux
+INPUT cover_letter_3.aux
+OUTPUT cover_letter_3.aux
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ot1bch.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ot1bch.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/bitstrea/charter/bchr7t.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/bitstrea/charter/bchr7t.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/bitstrea/charter/bchr7t.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/bitstrea/charter/bchr7t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/bitstrea/charter/bchr8r.tfm
+INPUT C:/Users/XPS 15-9550/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT cover_letter_3.aux
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb
