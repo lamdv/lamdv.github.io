@@ -11,6 +11,86 @@
             "title": "My Personal Website/Blog thinggy"
         },
         {
+            "location": "/CV/",
+            "text": "Dang Vu Lam\n\n\nICTLab, University of Science and Technology of Hanoi, VAST\n\n\nEmail\n: \nlam.dv@live.com\n\n\n\u00a0\n\n\n\nEDUCATION\n\n\n\u00a0\n\n\nUniverstiy of Science and Technology of Hanoi\n\n\nOct. 2013 - Oct 2017\n\n\nBachelor of Science and Technology\n\nFalcuty of Information and Communication Technology\n\u00a0\n\n\nThesis topic\n: Extreme Learning Machine and Application\n\n\n\n\n\nNguyen Tat Thanh High School\n\n\nHanoi National University of Education\n\nSep 2011 - Sep 2013\n\n\n\u00a0\n\n\n\nRESEARCH INTEREST\n\n\nMy current research interest including, but not limited to:\n\n\n\n\nNeural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.\n\n\nOptimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.\n\n\nData Science: Advance Data Structure, Indexing, Knowledge Representation.\n\n\nApplication of Neural Networks: Bioinformatics and Robotics, Image Processing, Pattern Recognition.\n\n\nMathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.\n\n\n\n\n\u00a0\n\n\n\nHONOR/ACTIVITIES\n\n\nDream Project Incubator\n\n\nJun 2015\n\n\nDream Project Incubator is a program setup by MIT PhDs and PhD candidates in collaboration with Boston Global Forum. I was awarded a 3 months stay in Boston for my work with FabLab USTH and FabLab Vietnam Foundation, and the chances to meet and confer with top minds from MIT and Harvard University.\n\n\n\u00a0\n\n\n3rd prize National gifted students\u2019 competition in Informatics\n\n\n2007, 2008 and 2009\n\n\nHeld by Vietnam Ministry of Information Technology (now Ministry of Information and Communication)\n\n\n\u00a0\n\n\n\nWORKING EXPRIENCES\n\n\nrRice project, IRD\n\n\nOct 2017 \u2013 Current\n\n\nI am currently working on a bioinformatics project under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai. The aim of the project is to develop an R package and accompanying Python library to mine genomics data across multiple databases.\n\n\nPosition\n: Programmer, Researcher.\n\n\nICTLab, University of Science and Technology of Hanoi\n\n\nApr 2017 \u2013 Oct 2017\n\n\nAs part of the collaboration between CVUT (Prague, Czech Republic) and USTH (Hanoi, Vietnam), I have done an internship under the supervision of Professor Basterrech (CVUT) that resulted in my bachelor thesis. We developed soft-computing algorithms for improving Extreme Learning Neural Networks using metaheuristic and swarm optimization technique.\n\n\nPosition\n: Intern Researcher.\n\n\nFabLab USTH\n\n\nMay 2015 \u2013 Current\n\n\nFabLab are global network of Digital Fabrication Laboratory and workshops with the purpose of enabling invention, innovation and hacking of physical world by providing access to digital fabrication tools. In 2015, I organized the FabLab at USTH as a student club with the aim to advocate and support said goals and inciting hacking mentality for students at USTH\n\n\nPosition\n: Programmer, Researcher.\n\n\nFabLab Vietnam Foundation\n\n\nMay 2015 \u2013 2016\n\n\nFabLab Vietnam Foundation is a consortium of all FabLabs operates in Vietnam. At the time consists of 5 Labs, our purpose is to promote the development of FabLabs style facilities and Maker Movement in Vietnam. In 2015, the Foundation received a grant of $100,000 from IPP to further expand the movement.\n\n\nPosition\n: Founding Member, Mentor.\n\n\nDream Project Incubator\n\n\nSeptember 2015 \u2013 2016\n\n\nDream Project Incubator aims to transform ambitious, self-driven young Vietnamese into better thinkers and doers via intellectual engagement and mentorship. Every year the project award 4 scholarship for ambitious Vietnamese whose age are between 19 and 25 for a 3 months summer trip to MIT, USA. After the conclusion of my USA trip, I served in the board of alumini, and as jury member and organizer for 2016 program\n\n\nPosition\n: Alumni, Organizer, Jury.\n\n\n\u00a0\n\n\n\nSKILLS\n\n\n\n\nResearch and Computer Science\n\n  Artificial Intelligence; Statistical Learning; Bioinformatics\n\n\nMathematics\n\n  Linear Algebra; Graph Theory; Numerical and Combinatorial Optimization; Algorithms Design and Computational Complexity Theory.\n\n\nSofware Engineering\n\n  Python 3.0; C, C++, C#; Java; NodeJS; R, Matlab, Tensorflow; Ruby on Rails; Arduino and Processing.\n\n\nHardware, Engineering, Design and Fabrication\n\n  CAD Design (CATIA, Solidwork, Fusion 360); Metal Working; CNC machining; 3D printing; Electronics.\n\n\nLanguage\n\n\nEnglish\n\nCompleted my Bachelor program in English\n\nIELTS Academic 6.5 (as of 2013)\n\n\nVietnamese\n\nFirst language\n\n\nFrench\nBeginner",
+            "title": "Curriculum Vitae"
+        },
+        {
+            "location": "/CV/#dang-vu-lam",
+            "text": "ICTLab, University of Science and Technology of Hanoi, VAST  Email :  lam.dv@live.com",
+            "title": "Dang Vu Lam"
+        },
+        {
+            "location": "/CV/#education",
+            "text": "",
+            "title": "EDUCATION"
+        },
+        {
+            "location": "/CV/#universtiy-of-science-and-technology-of-hanoi",
+            "text": "Oct. 2013 - Oct 2017  Bachelor of Science and Technology \nFalcuty of Information and Communication Technology \u00a0  Thesis topic : Extreme Learning Machine and Application",
+            "title": "Universtiy of Science and Technology of Hanoi"
+        },
+        {
+            "location": "/CV/#nguyen-tat-thanh-high-school",
+            "text": "Hanoi National University of Education \nSep 2011 - Sep 2013",
+            "title": "Nguyen Tat Thanh High School"
+        },
+        {
+            "location": "/CV/#research-interest",
+            "text": "My current research interest including, but not limited to:   Neural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.  Optimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.  Data Science: Advance Data Structure, Indexing, Knowledge Representation.  Application of Neural Networks: Bioinformatics and Robotics, Image Processing, Pattern Recognition.  Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.",
+            "title": "RESEARCH INTEREST"
+        },
+        {
+            "location": "/CV/#honoractivities",
+            "text": "",
+            "title": "HONOR/ACTIVITIES"
+        },
+        {
+            "location": "/CV/#dream-project-incubator",
+            "text": "Jun 2015  Dream Project Incubator is a program setup by MIT PhDs and PhD candidates in collaboration with Boston Global Forum. I was awarded a 3 months stay in Boston for my work with FabLab USTH and FabLab Vietnam Foundation, and the chances to meet and confer with top minds from MIT and Harvard University.",
+            "title": "Dream Project Incubator"
+        },
+        {
+            "location": "/CV/#3rd-prize-national-gifted-students-competition-in-informatics",
+            "text": "2007, 2008 and 2009  Held by Vietnam Ministry of Information Technology (now Ministry of Information and Communication)",
+            "title": "3rd prize National gifted students\u2019 competition in Informatics"
+        },
+        {
+            "location": "/CV/#working-expriences",
+            "text": "",
+            "title": "WORKING EXPRIENCES"
+        },
+        {
+            "location": "/CV/#rrice-project-ird",
+            "text": "Oct 2017 \u2013 Current  I am currently working on a bioinformatics project under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai. The aim of the project is to develop an R package and accompanying Python library to mine genomics data across multiple databases.  Position : Programmer, Researcher.",
+            "title": "rRice project, IRD"
+        },
+        {
+            "location": "/CV/#ictlab-university-of-science-and-technology-of-hanoi",
+            "text": "Apr 2017 \u2013 Oct 2017  As part of the collaboration between CVUT (Prague, Czech Republic) and USTH (Hanoi, Vietnam), I have done an internship under the supervision of Professor Basterrech (CVUT) that resulted in my bachelor thesis. We developed soft-computing algorithms for improving Extreme Learning Neural Networks using metaheuristic and swarm optimization technique.  Position : Intern Researcher.",
+            "title": "ICTLab, University of Science and Technology of Hanoi"
+        },
+        {
+            "location": "/CV/#fablab-usth",
+            "text": "May 2015 \u2013 Current  FabLab are global network of Digital Fabrication Laboratory and workshops with the purpose of enabling invention, innovation and hacking of physical world by providing access to digital fabrication tools. In 2015, I organized the FabLab at USTH as a student club with the aim to advocate and support said goals and inciting hacking mentality for students at USTH  Position : Programmer, Researcher.",
+            "title": "FabLab USTH"
+        },
+        {
+            "location": "/CV/#fablab-vietnam-foundation",
+            "text": "May 2015 \u2013 2016  FabLab Vietnam Foundation is a consortium of all FabLabs operates in Vietnam. At the time consists of 5 Labs, our purpose is to promote the development of FabLabs style facilities and Maker Movement in Vietnam. In 2015, the Foundation received a grant of $100,000 from IPP to further expand the movement.  Position : Founding Member, Mentor.",
+            "title": "FabLab Vietnam Foundation"
+        },
+        {
+            "location": "/CV/#dream-project-incubator_1",
+            "text": "September 2015 \u2013 2016  Dream Project Incubator aims to transform ambitious, self-driven young Vietnamese into better thinkers and doers via intellectual engagement and mentorship. Every year the project award 4 scholarship for ambitious Vietnamese whose age are between 19 and 25 for a 3 months summer trip to MIT, USA. After the conclusion of my USA trip, I served in the board of alumini, and as jury member and organizer for 2016 program  Position : Alumni, Organizer, Jury.",
+            "title": "Dream Project Incubator"
+        },
+        {
+            "location": "/CV/#skills",
+            "text": "Research and Computer Science \n  Artificial Intelligence; Statistical Learning; Bioinformatics  Mathematics \n  Linear Algebra; Graph Theory; Numerical and Combinatorial Optimization; Algorithms Design and Computational Complexity Theory.  Sofware Engineering \n  Python 3.0; C, C++, C#; Java; NodeJS; R, Matlab, Tensorflow; Ruby on Rails; Arduino and Processing.  Hardware, Engineering, Design and Fabrication \n  CAD Design (CATIA, Solidwork, Fusion 360); Metal Working; CNC machining; 3D printing; Electronics.  Language  English \nCompleted my Bachelor program in English \nIELTS Academic 6.5 (as of 2013)  Vietnamese \nFirst language  French\nBeginner",
+            "title": "SKILLS"
+        },
+        {
             "location": "/Scientific Journey/intro/",
             "text": "H\u00e0nh tr\u00ecnh khoa h\u1ecdc: Python v\u00e0 R\n\n\n\n\nTrong n\u1ed7 l\u1ef1c m\u1edbi nh\u1ea5t c\u1ee7a L\u00e2m \u0111\u1ec3 t\u00e1ch r\u1eddi m\u1eb7t h\u1ecdc t\u1eadp/h\u1ecdc thu\u1eadt v\u00e0 cu\u1ed9c s\u1ed1ng n\u1ed9i t\u00e2m, \u0111\u00e2y l\u00e0 m\u1ed9t s\u1ef1 th\u1ee5t l\u00f9i tai h\u1ea1i.\n\n\nT\u1eeb gi\u1edd \u0111\u1ebfn khi sinh nh\u1eadt 23 tu\u1ed5i c\u1ee7a b\u1ea3n th\u00e2n, m\u00ecnh s\u1ebd \u0111\u1eb7t m\u1ee5c ti\u00eau m\u1ed7i ng\u00e0y (c\u1ed1 g\u1eafng) vi\u1ebft \u00edt ra 1 b\u00e0i, v\u00e0 c\u00f4ng vi\u1ec7c l\u1edbn nh\u1ea5t m\u00ecnh \u0111ang c\u1ea7n ph\u1ea3i l\u00e0m l\u00e0 nghi\u00ean c\u1ee9u. D\u0129 nhi\u00ean, m\u1ed9t ng\u00e0y th\u00ec c\u00f3 24 ch\u1ee9 kh\u00f4ng ph\u1ea3i 48 ti\u1ebfng \u0111\u1ed3ng h\u1ed3, v\u00e0 m\u1ed9t ng\u01b0\u1eddi m\u1ed7i ng\u00e0y ch\u1ec9 c\u00f3 th\u1ec3 c\u00f3 t\u1eebng \u0111\u1ea5y th\u1eddi gian \u0111\u1ec3 ng\u1ed3i \u0111\u1ecdc v\u00e0 vi\u1ebft. V\u00ec v\u1eady, t\u1ed1t nh\u1ea5t l\u00e0 vi\u1ebft v\u1ec1 c\u00e1i m\u00ecnh \u0111ang \u0111\u1ecdc, v\u1eeba \u0111\u1ec3 ghi nh\u1edb v\u1eeba \u0111\u1ec3 l\u1ea5y th\u00eam c\u1ea3m h\u1ee9ng m\u00e0 ng\u1ed3i... vi\u1ebft. M\u1ed9t ch\u00fat v\u1ec1 c\u00f4ng vi\u1ec7c hi\u1ec7n t\u1ea1i. N\u00f3i cho oai, m\u00ecnh l\u00e0 m\u1ed9t researcher \u1edf ICTLab tr\u01b0\u1eddng USTH. N\u00f3i chu\u1ea9n ra m\u00ecnh l\u00e0 m\u1ed9t th\u1ee3 code cho th\u1ea7y Pierre \u0111\u1ec3 l\u1ea5y ti\u1ec1n v\u00e0 c\u01a1 h\u1ed9i sang b\u1ec3n :)). C\u00e1c ph\u1ea7n code li\u00ean quan \u0111\u1ebfn s\u1eed d\u1ee5ng c\u00f4ng c\u1ee5 ICT trong tin sinh h\u1ecdc, c\u1ee5 th\u1ec3 l\u00e0 g\u00ec th\u00ec... m\u00ecnh c\u0169ng ch\u1eb3ng bi\u1ebft ha ha.\n\n\n2 c\u00f4ng c\u1ee5 ch\u00ednh c\u1ee7a m\u00ecnh v\u00e0 c\u1ee7a r\u1ea5t nhi\u1ec1u d\u1ef1 \u00e1n Khoa h\u1ecdc D\u1eef li\u1ec7u (Data Science) l\u00e0 R v\u00e0 Python. C\u00e1 nh\u00e2n m\u00ecnh l\u00e0 ng\u01b0\u1eddi \u0111\u00e3 kh\u00e1 c\u00f3 kinh nghi\u1ec7m s\u1eed d\u1ee5ng Python trong th\u1eddi gian kh\u00e1 l\u00e2u, nh\u01b0ng R l\u00e0 m\u1ed9t th\u1ee9 kh\u00e1c h\u1eb3n. Kh\u00f4ng nh\u01b0 Python, m\u1ed9t ng\u00f4n ng\u1eef \u0111a d\u1ee5ng (general purpose), R l\u00e0 m\u1ed9t c\u00f4ng c\u1ee5 kh\u00e1 \u0111\u1eb7c tr\u01b0ng cho ng\u00e0nh khoa h\u1ecdc d\u1eef li\u1ec7u. T\u1ea5t c\u1ea3 m\u1ecdi th\u1ee9 li\u00ean quan \u0111\u1ec3n R \u0111\u1ec1u nh\u1eb1m 1 m\u1ee5c ti\u00eau: khai ph\u00e1 d\u1eef li\u1ec7u. V\u00ec v\u1eady R l\u00e0 m\u1ed9t c\u00f4ng c\u1ee5 tuy\u1ec7t v\u1eddi cho m\u1ed9t tr\u01b0\u1eddng h\u1ee3p c\u1ee5 th\u1ec3 c\u1ee7a m\u1ed9t ng\u00e0nh khoa h\u1ecdc c\u1ee5 th\u1ec3. C\u00e1c gi\u1edbi h\u1ea1n v\u1ec1 kh\u1ea3 n\u0103ng \u1ee9ng d\u1ee5ng c\u1ee7a R trong c\u00e1c b\u00e0i to\u00e1n kh\u00e1c b\u1ed7ng tr\u1edf n\u00ean kh\u00f4ng quan tr\u1ecdng.\n\n\n(N\u00f3i nh\u01b0 v\u1eady kh\u00f4ng ph\u1ea3i l\u00e0 R kh\u00f4ng th\u1ec3 l\u00e0m \u0111\u01b0\u1ee3c nh\u1eefng vi\u1ec7c kh\u00e1c. \u00d4ng n\u1ed9i Hadley vi\u1ebft c\u1ea3 m\u1ea5y quy\u1ec3n s\u00e1ch v\u1ec1 R \u0111\u01b0\u1ee3c d\u00e0n trang b\u1eb1ng... R, s\u1eed d\u1ee5ng RMarkdown v\u00e0 Bookdown, 2 package ch\u00ednh \u1ed5ng ph\u00e1t tri\u1ec3n cho R. Ngo\u00e0i ra c\u0169ng c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng Sparkling \u0111\u1ec3 vi\u1ebft web service cho c\u00e1c routine R, kh\u00e1 l\u00e0 h\u1eefu d\u1ee5ng \u0111\u1ec3 \u0111\u01b0a c\u00e1c nghi\u00ean c\u1ee9u R v\u00e0o \u00e1p d\u1ee5ng th\u1ef1c t\u1ebf.\n\n\nV\u00ec y\u00eau c\u1ea7u c\u1ee7a c\u00f4ng vi\u1ec7c trong d\u1ef1 \u00e1n, t\u1eeb ng\u00e0y h\u00f4m nay m\u00ecnh s\u1ebd b\u1eaft \u0111\u1ea7u c\u00e0y cu\u1ed1c R \u0111\u1ebfn khi n\u00e0o R v\u00e0 Python c\u1ee7a m\u00ecnh \u0111\u1ea1t \u0111\u01b0\u1ee3c t\u00ecnh \u0111\u1ed9 t\u01b0\u01a1ng \u0111\u1ed1i \u0111\u1ed3ng nh\u1ea5t v\u1edbi nhau. Gi\u1ed1ng nh\u01b0 tay tr\u00e1i v\u00e0 tay ph\u1ea3i v\u1eady, nh\u01b0ng m\u00ecnh l\u00e0 ng\u01b0\u1eddi thu\u1eadn c\u1ea3 2 tay.\n\n\nC\u00e1c t\u00e0i li\u1ec7u, reference v\u00e0 v\u00ed d\u1ee5 s\u1ebd s\u1eed d\u1ee5ng b\u1ed9 c\u00f4ng c\u1ee5 R chu\u1ea9n, ch\u1ea1y tr\u00ean RStudio tr\u00ean n\u1ec1n Windows 10. T\u00e0i li\u1ec7u tham kh\u1ea3o ch\u00ednh s\u1ebd l\u00e0 R for Data Science c\u1ee7a Hadley (\u00f4ng tr\u00f9m ng\u00e0nh R) \u0111\u1ed1i v\u1edbi R v\u00e0 How to think like a Computer Scientist \u0111\u1ed1i v\u1edbi Python.\n\n\nLet's the journey begin.",
             "title": "H\u00e0nh tr\u00ecnh khoa h\u1ecdc: Python v\u00e0 R"
