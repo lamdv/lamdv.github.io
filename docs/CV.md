@@ -35,7 +35,7 @@ Sep 2010 - Sep 2013
 1. Neural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.
 1. Optimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.
 1. Data Science: Advance Data Structure, Indexing, Knowledge Representation.
-1. Application of Neural Networks: Bioinformatics and Robotics, Image Processing, Pattern Recognition.
+1. Application of Neural Networks: Bioinformatics, Robotics, Image Processing, Pattern Recognition.
 1. Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.
 
 &nbsp;
