@@ -11,6 +11,7 @@ docs_dir: docs
 site_dir: site
 pages:
   - Home: 'index.md'
+  - Curriculum Vitae: 'CV.md'
   - Scientific Journey:
     - 'Hành trình khoa học: Python và R': 'Scientific Journey\\intro.md'
     - '(Những) ngày đầu tiên': 'Scientific Journey\\day-one-ish.md'
