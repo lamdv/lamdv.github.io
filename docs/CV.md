@@ -1,6 +1,7 @@
 # Dang Vu Lam
 
-<b>*ICTLab, University of Science and Technology of Hanoi, VAST*</b>
+***ICTLab - University of Science and Technology of Hanoi, VAST***<br>
+***Institut de Recherche pour le Développement (IRD)***
 
 ***Email***: *lam.dv@live.com*
 
@@ -9,14 +10,12 @@
 
 ## EDUCATION
 
-&nbsp;
-
 ### Universtiy of Science and Technology of Hanoi
 
 Oct. 2013 - Oct 2017<br>
 *Bachelor of Science and Technology*<br>
 Falcuty of Information and Communication Technology<br>&nbsp;<br>
-***Thesis topic**: Extreme Learning Machine and Application*
+***Thesis topic**: Extreme Learning Machine*
 
 <hr>
 
