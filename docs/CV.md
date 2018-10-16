@@ -1,15 +1,21 @@
 # Dang Vu Lam
 
-***ICTLab - University of Science and Technology of Hanoi, VAST***<br>
-***Institut de Recherche pour le Développement (IRD)***
+***M1 MoSIG, Universite Grenoble Alpes***<br>
 
-***Email***: *lam.dv@live.com*
+***Email***: *lam.dv@live.com* or *dangv@etu.univ-grenoble-alpes.fr*
 
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
 
 ## EDUCATION
 
+### Universtiy Grenoble Alpes
+
+Sep. 2018 - Current<br>
+*Master of Science in Informatics*<br>
+UFR IMAG<br>&nbsp;<br>
+
+<hr>
 ### Universtiy of Science and Technology of Hanoi
 
 Oct. 2013 - Oct 2017<br>
@@ -61,9 +67,9 @@ Held by Vietnam Ministry of Information Technology (now Ministry of Information 
 ## WORKING EXPRIENCES
 
 ### rRice project, IRD
-*Oct 2017 – Current*
+*Oct 2017 – Aug 2018*
 
-I am currently working on a bioinformatics project under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai. The aim of the project is to develop an R package and accompanying Python library to mine genomics data across multiple databases.
+Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
 
 **Position**: Programmer, Researcher.
 

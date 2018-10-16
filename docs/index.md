@@ -2,6 +2,8 @@
 
 !["My face's suppose to be here"](img/myface.JPG "This is my face")
 
-My name is Lam, Dang. I'm a junior researcher/programmer at USTH's ICTLab, VAST (Vietnam). My speciality is in Software Engineering, Artificial Intelligence and Data Mining. Currently I am working on a bioinformatic project, developing an engine to query from multiple genomics databases.
+My name is Lam, Dang. I'm a master student at UGA's MoSIG program (Grenoble, France). My speciality including Software Engineering, Artificial Intelligence and Data Retrieval.
 
-Beside working in informatics, I am also the founder of a Fab Lab and Technology Club at USTH. Currently our fleet of machinary including 2 3D printers and several hand tools. Soon to join are some CNC machines and a laser cutter, all design and build in house. Our projects currently including machine building projects and a hydroponic project.
+For the last year I have been working on a bioinformatic project, developing an engine to query from multiple genomics databases.
+
+Beside working in informatics, I am also the founder of a Fab Lab and Technology Club at USTH. Builder of several machines and design, I am well versed in (very informal) mechanical design and CAD/CAM. Favorite flavor of CAD: Fusion 360.

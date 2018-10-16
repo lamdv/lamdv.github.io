@@ -5,7 +5,6 @@
 1. Process incoming query sequence
     1. Single simple query # Elaborate
         1. 1 database with one gene
-        1. 
     1. Bulk query
         1. Identify databases
         1. Collasping similar ids/query string into list of unique id
@@ -16,7 +15,7 @@
 1. Fetch information about databases
     1. Database information is stored in a database (metadatabase)
     1. Differential between database is intuitively indexed base on both name and function of the database
-        1. In current version, each function of the databases if accessed differently is considered separated database. For example funricegene db is divided into 3 different databases entry.
+        1. In current version, each function of the databases if accessed differently is considered separated database. For example funricegene db is divided into 3 different databases' entry.
         1. In future revision, function of the databases will be integrated into the description of database using template metaprogramming technique.
     1. Part of html page that correspond to the data is exacted per definition store in database
         1. Current version define the area of data and parse datas into cell according to list of headers
@@ -33,11 +32,13 @@
 
 1. Post-processing of data
     1. Text clean up
+
         Option for
         * Regular Expression
         * Python script (In future version)
         * Gawk (In future version)
     1. Trimming and filterings
+
         Option for
         * Regular Expression
         * Python script (In future version)
