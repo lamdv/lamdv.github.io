@@ -1,34 +1,10 @@
-# Dang Vu Lam
+# [DANG Vu Lam](#1)
 
 ***M1 MoSIG, Universite Grenoble Alpes***<br>
 
-***Email***: *lam.dv@live.com* or *dangv@etu.univ-grenoble-alpes.fr*
+***Email***: [*dangv@etu.univ-grenoble-alpes.fr*](mailto:dangv@etu.univ-grenoble-alpes.fr)<br>***Personal Contact***: [*lam.dv@live.com*](mailto:lam.dv@live.com)<br>***Phone number***: (+33) 6 68 36 02 29
 
-&nbsp;
-<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
-
-## EDUCATION
-
-### Universtiy Grenoble Alpes
-
-Sep. 2018 - Current<br>
-*Master of Science in Informatics*<br>
-UFR IMAG<br>&nbsp;<br>
-
-<hr>
-### Universtiy of Science and Technology of Hanoi
-
-Oct. 2013 - Oct 2017<br>
-*Bachelor of Science and Technology*<br>
-Falcuty of Information and Communication Technology<br>&nbsp;<br>
-***Thesis topic**: Extreme Learning Machine*
-
-<hr>
-
-### Nguyen Tat Thanh High School
-
-*Hanoi National University of Education*<br>
-Sep 2010 - Sep 2013
+[*Github*](https://github.com/lamdv) | [*Linkedin*](https://www.linkedin.com/in/dang-vu-lam-308497b0/) | [*Webpage*](https://lamdv.github.io/)
 
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
@@ -46,20 +22,29 @@ Sep 2010 - Sep 2013
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
 
-## HONOR/ACTIVITIES
+## EDUCATION
 
-### Dream Project Incubator
-*Jun 2015*
+### Universtiy Grenoble Alpes
 
-Dream Project Incubator is a program setup by MIT PhDs and PhD candidates in collaboration with Boston Global Forum. I was awarded a 3 months stay in Boston for my work with FabLab USTH and FabLab Vietnam Foundation, and the chances to meet and confer with top minds from MIT and Harvard University.
+Sep. 2018 - Current<br>
+*Master of Science in Informatics*<br>
+UFR IMAG<br>&nbsp;<br>
 
-&nbsp;
 <hr>
 
-### 3rd prize National gifted students’ competition in Informatics
-*2007, 2008 and 2009*
+### Universtiy of Science and Technology of Hanoi
 
-Held by Vietnam Ministry of Information Technology (now Ministry of Information and Communication)
+Oct. 2013 - Oct 2017<br>
+*Bachelor of Science and Technology*<br>
+Falcuty of Information and Communication Technology<br>&nbsp;<br>
+***Thesis topic**: Extreme Learning Machine*
+
+<hr>
+
+### Nguyen Tat Thanh High School
+
+*Hanoi National University of Education*<br>
+Sep 2010 - Sep 2013
 
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
@@ -79,7 +64,7 @@ Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped devel
 ### ICTLab, University of Science and Technology of Hanoi
 *Apr 2017 – Oct 2017*
 
-As part of the collaboration between CVUT (Prague, Czech Republic) and USTH (Hanoi, Vietnam), I have done an internship under the supervision of Professor Basterrech (CVUT) that resulted in my bachelor thesis. We developed soft-computing algorithms for improving Extreme Learning Neural Networks using metaheuristic and swarm optimization technique.
+As part of the collaboration between CVUT (Prague, Czech Republic) and USTH (Hanoi, Vietnam), I have done an internship under the supervision of Professor Basterrech (CVUT) that resulted in my bachelor thesis. We developed metaheuristic and swarm optimization algorithms for improving Extreme Learning Neural Networks.
 
 **Position**: Intern Researcher.
 
@@ -87,7 +72,7 @@ As part of the collaboration between CVUT (Prague, Czech Republic) and USTH (Han
 <hr>
 
 ### FabLab USTH
-*May 2015 – Current*
+*May 2015 – Aug 2018*
 
 FabLab are global network of Digital Fabrication Laboratory and workshops with the purpose of enabling invention, innovation and hacking of physical world by providing access to digital fabrication tools. In 2015, I organized the FabLab at USTH as a student club with the aim to advocate and support said goals and inciting hacking mentality for students at USTH
 
@@ -116,6 +101,24 @@ Dream Project Incubator aims to transform ambitious, self-driven young Vietnames
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
 
+## HONOR/ACTIVITIES
+
+### Dream Project Incubator
+*Jun 2015*
+
+Dream Project Incubator is a program setup by MIT PhDs and PhD candidates in collaboration with Boston Global Forum. I was awarded a 3 months stay in Boston for my work with FabLab USTH and FabLab Vietnam Foundation, and the chances to meet and confer with top minds from MIT and Harvard University.
+
+&nbsp;
+<hr>
+
+### 3rd prize National gifted students’ competition in Informatics
+*2007, 2008 and 2009*
+
+Held by Vietnam Ministry of Information Technology (now Ministry of Information and Communication)
+
+&nbsp;
+<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
+
 ## SKILLS
 
 * **Mathematics**<br>
@@ -126,9 +129,13 @@ Dream Project Incubator aims to transform ambitious, self-driven young Vietnames
   CAD Design (CATIA, Solidwork, Fusion 360); Metal Working; CNC machining; 3D printing; Electronics.
 * **Language**<br>
     * English<br>
-      &emsp;IELTS Academic 6.5 (as of 2013)<br>
+      &emsp;IELTS Academic 7.5 (as of 2018)<br>
       &emsp;Completed my Bachelor program in English<br>
     * Vietnamese<br>
       &emsp;First language
     * French<br>
       &emsp;Beginner
+
+&nbsp;
+
+<a name="1">^</a>*In Vietnamese, the last name is DANG*
