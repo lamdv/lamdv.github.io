@@ -1,0 +1,520 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.2)  3 MAY 2018 16:26
+entering extended mode
+**"c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex"
+("c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex"
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\newlfm\newlfm.cls"
+Document Class: newlfm 2009/04/10 v9.4 Letter-Fax-Memo LaTeX Document Class
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\newlfm\setdim.sty"
+Package: setdim 2009/04/10 v9.4 Address macros
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip41
+\f@nch@O@elh=\skip42
+\f@nch@O@erh=\skip43
+\f@nch@O@olh=\skip44
+\f@nch@O@orh=\skip45
+\f@nch@O@elf=\skip46
+\f@nch@O@erf=\skip47
+\f@nch@O@olf=\skip48
+\f@nch@O@orf=\skip49
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count79
+\calc@Bcount=\count80
+\calc@Adimen=\dimen102
+\calc@Bdimen=\dimen103
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count81
+\calc@Cskip=\skip52
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count82
+\rotFPtop=\skip53
+\rotFPbot=\skip54
+\rot@float@box=\box26
+\rot@mess@toks=\toks15
+)
+\@addr@fr@sk@b=\skip55
+\@addr@fr@sk@a=\skip56
+\@addr@to@sk@b=\skip57
+\@addr@to@sk@a=\skip58
+\@blka@b=\skip59
+\@blka@a=\skip60
+\@blkb@b=\skip61
+\@blkb@a=\skip62
+\@blkc@b=\skip63
+\@blkc@a=\skip64
+\@caption@skip@above=\skip65
+\@caption@skip@below=\skip66
+\@cello@h=\skip67
+\@cello@w=\skip68
+\@cello@d=\skip69
+\@cello@l=\skip70
+\@dt@sk@b=\skip71
+\@dt@sk@a=\skip72
+\@Dth@H@L=\skip73
+\@Dth@H@C=\skip74
+\@Dth@H@R=\skip75
+\@Dth@F@L=\skip76
+\@Dth@F@C=\skip77
+\@Dth@F@R=\skip78
+\@Dth@h@l=\skip79
+\@Dth@h@c=\skip80
+\@Dth@h@r=\skip81
+\@Dth@f@l=\skip82
+\@Dth@f@c=\skip83
+\@Dth@f@r=\skip84
+\@greet@to@sk@b=\skip85
+\@greet@to@sk@a=\skip86
+\@Hgt@Head=\skip87
+\@Hrw=\skip88
+\@hrw=\skip89
+\@extr@hor=\skip90
+\@Frw=\skip91
+\@frw=\skip92
+\@Hgt@Foot=\skip93
+\@Hgt@head=\skip94
+\@Hgt@foot=\skip95
+\@Hgt@H@L=\skip96
+\@Hgt@H@C=\skip97
+\@Hgt@H@R=\skip98
+\@Hgt@F@L=\skip99
+\@Hgt@F@C=\skip100
+\@Hgt@F@R=\skip101
+\@Hgt@h@l=\skip102
+\@Hgt@h@c=\skip103
+\@Hgt@h@r=\skip104
+\@Hgt@f@l=\skip105
+\@Hgt@f@c=\skip106
+\@Hgt@f@r=\skip107
+\@lab@bl=\skip108
+\@lab@pl=\skip109
+\@lab@pw=\skip110
+\@lab@bh=\skip111
+\@lab@bw=\skip112
+\@lab@th=\skip113
+\@lab@lm=\skip114
+\@marg@lt=\skip115
+\@marg@rt=\skip116
+\@marg@tp=\skip117
+\@marg@bt=\skip118
+\@marg@tp@a=\skip119
+\@marg@bt@a=\skip120
+\@marg@bt@b=\skip121
+\@marg@tp@b=\skip122
+\@marg@tp@s=\skip123
+\@marg@lt@r=\skip124
+\@marg@lt@l=\skip125
+\@marg@rt@r=\skip126
+\@marg@rt@l=\skip127
+\@marg@lt@tp@d=\skip128
+\@marg@rt@tp@d=\skip129
+\@Min@Hgt@Head=\skip130
+\@Min@Hgt@head=\skip131
+\@Min@Hgt@Foot=\skip132
+\@Min@Hgt@foot=\skip133
+\@Min@Hgt@Right=\skip134
+\@Min@Hgt@right=\skip135
+\@Min@Hgt@Left=\skip136
+\@Min@Hgt@left=\skip137
+\@Plg=\skip138
+\@Pwd=\skip139
+\@plg=\skip140
+\@pwd=\skip141
+\@post@sig@sp@a=\skip142
+\@post@sig@sp@b=\skip143
+\@pre@memo@sp=\skip144
+\@post@memo@sp=\skip145
+\@sig@sp=\skip146
+\@text@width=\skip147
+\@sig@sk@a=\skip148
+\@sig@sk@b=\skip149
+\@sig@sk@c=\skip150
+\@sig@sk@r=\skip151
+\@cls@sk@a=\skip152
+\@cls@sk@b=\skip153
+\@text@height=\skip154
+\@unpr@tp=\skip155
+\@unpr@bm=\skip156
+\@unpr@rt=\skip157
+\@unpr@lt=\skip158
+\@util=\skip159
+\@utila=\skip160
+\@utilb=\skip161
+\@utilc=\skip162
+\@utild=\skip163
+\@utile=\skip164
+\@utilf=\skip165
+\@utilg=\skip166
+\@utilh=\skip167
+\@utili=\skip168
+\@utilj=\skip169
+\@utilk=\skip170
+\@utill=\skip171
+\@xda=\skip172
+\@xdb=\skip173
+\@xdc=\skip174
+\@xdd=\skip175
+\@xde=\skip176
+\@xdf=\skip177
+\@xdg=\skip178
+\@xdh=\skip179
+\@xdi=\skip180
+\@sig@box@a=\box27
+\b@addr@fr=\box28
+\b@addr@to=\box29
+\@x@c=\box30
+\@x@l=\box31
+\@x@r=\box32
+\fba=\box33
+\adrfr=\box34
+\adrto=\box35
+\@sig@box@b=\box36
+\@sig@box@c=\box37
+\@sig@box@d=\box38
+\@sig@box@e=\box39
+\@sig@box@f=\box40
+\@sig@box@g=\box41
+\@sig@box@h=\box42
+\@sig@box@i=\box43
+\@sig@box@j=\box44
+\@rest@ltr=\box45
+\@resta@ltr=\box46
+\@restb@ltr=\box47
+\@restc@ltr=\box48
+\@restd@ltr=\box49
+\@reste@ltr=\box50
+\c@@c@pos=\count83
+\c@figure=\count84
+\c@table=\count85
+\c@@sig@tot=\count86
+\c@@lab@tot@row=\count87
+\c@@lab@tot@col=\count88
+\c@@lab@cnt@row=\count89
+\c@@lab@cnt@col=\count90
+\@nlfm@addr=\count91
+\@nlfm@util=\count92
+\@nlfm@uta=\count93
+\@nlfm@utb=\count94
+
+All language information must be in newlfm.cls
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\letter.cls"
+Document Class: letter 2014/09/29 v1.2z Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\longindentation=\dimen106
+\indentedwidth=\dimen107
+\labelcount=\count95
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\newlfm\addrset.sty"
+Package: addrset 2009/04/10 v9.4 Address macros
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\afterpage.sty"
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks16
+\AP@partial=\box51
+\AP@footins=\box52
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\envlab\envlab.sty"
+Package: envlab 1997/07/16 v1.2 Envelopes and Labels
+Package envlab Info: Envelopes & Labels package: found makelabels...
+(envlab)             Seems everything is OK. Good luck. on input line 58.
+\@envelopeposition=\count96
+\PSEnvelopeTray=\toks17
+\EnvelopeWidth=\skip181
+\EnvelopeHeight=\skip182
+\EnvelopeTopMargin=\skip183
+\EnvelopeLeftMargin=\skip184
+\LabelWidth=\skip185
+\LabelHeight=\skip186
+\LabelTopMargin=\skip187
+\LabelLeftMargin=\skip188
+\LabelRightMargin=\skip189
+\c@LabelMaxCol=\count97
+\c@LabelMaxRow=\count98
+\FromAddressTopMargin=\skip190
+\FromAddressLeftMargin=\skip191
+\FromAddressHeight=\skip192
+\FromAddressWidth=\skip193
+\ToAddressTopMargin=\skip194
+\ToAddressLeftMargin=\skip195
+\ToAddressWidth=\skip196
+
+Loading configuration file envlab.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\envlab\envlab.cfg"
+File: envlab.cfg 1997/07/16 v1.2 Envelopes and Labels
+)
+\c@LabelCountCol=\count99
+\c@LabelCountRow=\count100
+\c@LabelOffsetCol=\count101
+\c@LabelOffsetRow=\count102
+\@numreturnlabels=\count103
+\@zipcode=\toks18
+\@zipcodesum=\count104
+\@barcodewidth=\skip197
+\@barcodeLheight=\skip198
+\@barcodeSheight=\skip199
+\@barcodeskip=\skip256
+\@addr@cap=\toks19
+)
+The default definition for memosec is used. File memosec.tex doesn't exist.
+Press release definitions stored in newlfm.cls
+faxpage definitions stored in newlfm.cls
+letrinfo.tex\ not found. All letter definitions must be in newlfm.cls
+LaTeX Info: Redefining \@texttop on input line 1884.
+\@rep@th=\dimen108
+\@rep@tw=\dimen109
+\@rep@om=\dimen110
+\@rep@em=\dimen111
+\@rep@cs=\dimen112
+\@rep@tm=\dimen113
+\@rep@hh=\dimen114
+\@rep@hs=\dimen115
+\@rep@fs=\dimen116
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\charter.sty"
+Package: charter 2005/04/12 PSNFSS-v9.2a (P.Dyballa) 
+)
+\Luiuc=\box53
+<logo.png, id=1, 1401.235pt x 521.95pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 27.
+(pdftex.def)             Requested size: 151.76659pt x 56.53062pt.
+
+Overfull \hbox (25.2941pt too wide) in paragraph at lines 27--27
+[][] 
+ []
+
+(cover_letter_3.aux)
+\openout1 = `cover_letter_3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Try loading font information for OT1+bch on input line 72.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1bch.fd"
+File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
+)
+\AtBeginShipoutBox=\box54
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen117
+\scratchbox=\box55
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen118
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks21
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 72.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 73.
+
+c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex:73: Undefined
+ control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex:73: Undefined
+ control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex:73: Undefined
+ control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/XPS 15-9550/Git/Writing/docs/Template/cover_letter_3.tex:73: Undefined
+ control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) detected at line 73
+  
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (96.66562pt): 
+ Make it at least 99.86569pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+
+{C:/Users/XPS 15-9550/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./log
+o.png>]
+
+Package lastpage Warning: Rerun to get the references right on input line 88.
+
+
+AED: lastpage setting LastPage
+(cover_letter_3.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4293 strings out of 493305
+ 56489 string characters out of 3138855
+ 139880 words of memory out of 3000000
+ 7796 multiletter control sequences out of 15000+200000
+ 6559 words of font info for 18 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,12n,45p,750b,542s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb>
+Output written on cover_letter_3.pdf (1 page, 35898 bytes).
+PDF statistics:
+ 14 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
