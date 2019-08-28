@@ -2,12 +2,18 @@
 title: "xgboost_sct"
 author: "VuLamDANG"
 date: "August 26, 2019"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_chunk$set(fig.path = 'xgboost_fig/')
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(cache.lazy = FALSE)
 
 directory <- "../simus"
 file_sumstat <- "sumstats.txt"
