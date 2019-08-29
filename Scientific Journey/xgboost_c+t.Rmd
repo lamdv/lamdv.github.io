@@ -1,5 +1,5 @@
 ---
-title: "xgboost_sct"
+title: "Survey on xgboost's objective functions"
 author: "VuLamDANG"
 date: "August 26, 2019"
 output: 
@@ -80,7 +80,7 @@ PRS_test <- snp_grid_PRS(G.test, all_keep = all_keep, betas = sumstats$beta,lpva
 
 XGBoost only accept dataframe, so all FBM output must be converted to data frame
 
-```{r, include=FALSE}
+```{r, }
 # Convert to dataframe for non-FBM based methods
 ds<-PRS[]
 y.train <- train$fam$affection
@@ -109,7 +109,7 @@ XGBoost provide slightly better result compare to SCT. However this result heavi
 
 For the first experimentation, I run 9 different *max_depth* and 9 *nrounds* with *count:poisson* objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of *gblinear* booster
 
-```{r, xgboost_poisson, include=FALSE, }
+```{r, xgboost_poisson, results=FALSE}
 poisson_AUCs <- matrix(,nrow = 10, ncol = 10)
 for (i in seq(2 : 10)){
   for (j in seq(2: 10)) {
@@ -136,6 +136,8 @@ for (i in seq(2 : 10)){
 poisson_AUCs
 boxplot(poisson_AUCs)
 ```
+
+I omitted the code for the next 2 experiments as they are largely similar, with exception of the option *objective* for *xgboost* function.
 
 For the next experimentation, I run 9 different *max_depth* and 9 *nrounds* with *reg:logistic* objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of *gblinear* booster
 
@@ -197,7 +199,7 @@ boxplot(bilog_AUCs)
 
 ## Comparison
 
-Here is a composite boxplot show the different between different 
+Here is a composite boxplot comparing different objective functions. Index 1 is *count:poisson*, 2 is *reg:logistic* and 3 is *binary:logistic*
 
 ```{r, comp, fig.cap="Comparision between Objective Functions"}
 AUCs <- list(as.vector(poisson_AUCs),as.vector(logistic_AUCs),as.vector(bilog_AUCs))

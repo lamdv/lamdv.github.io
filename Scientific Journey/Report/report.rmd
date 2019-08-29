@@ -3,13 +3,16 @@ title: "Report on combining (Stack) C+T predictor"
 author: "DANG Vu-Lam"
 output:
   html_document:
-    df_print: paged
+    keep_md: true
 editor_options: 
   chunk_output_type: inline
 ---
 
 ```{r, setup, include=FALSE} 
 knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/', warning = FALSE)
+knitr::opts_chunk$set(fig.path = 'report_fig/')
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(cache.lazy = FALSE)
 
 directory <- "../simus"
 file_sumstat <- "sumstats.txt"
