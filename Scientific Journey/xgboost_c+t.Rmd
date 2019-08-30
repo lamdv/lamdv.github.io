@@ -96,7 +96,7 @@ To oversampling I extract all positive (*affection = 1*), and append them a numb
 
 ```{r, Data-treatment, }
 y_case <- which(train$fam$affection %in% c(1))
-for (i in range(1, 10)){
+for (i in seq(1, 10)){
   y.train <- append(y.train, train$fam$affection[y_case])
   ds <- rbind(ds, PRS[y_case,])
 }
@@ -109,7 +109,7 @@ XGBoost provide slightly better result compare to SCT. However this result heavi
 
 For the first experimentation, I run 9 different *max_depth* and 9 *nrounds* with *count:poisson* objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of *gblinear* booster
 
-```{r, xgboost_poisson, results=FALSE}
+```{r, xgboost_poisson, echo=TRUE, results=FALSE}
 poisson_AUCs <- matrix(,nrow = 10, ncol = 10)
 for (i in seq(2 : 10)){
   for (j in seq(2: 10)) {
@@ -196,6 +196,38 @@ for (i in seq(2 : 10)){
 ```{r,result_bilog, fig.cap='Binary Logistic objective'}
 boxplot(bilog_AUCs)
 ```
+
+## The effect of Boosters
+
+```{r, xgboost_tree_poisson, echo=TRUE, results=FALSE}
+tree_poisson_AUCs <- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp <- c()
+    bstSparse <- xgboost(data = ds[], 
+                         label = y.train, 
+                         booster="gbtree",
+                         max_depth = i, 
+                         eta = 1, 
+                         nthread = 2, 
+                         nrounds = j, 
+                         lambda = 0.1,
+                         objective = "count:poisson"
+                         )
+    pred <- predict(bstSparse, PRS_test[])
+    tree_poisson_AUCs[i,j] <- append(temp,AUC(pred = pred, test$fam$affection))
+  }
+}
+```
+```{r,result_tree_poisson, fig.cap="Poisson objective w/ Tree booster"}
+tree_poisson_AUCs
+boxplot(tree_poisson_AUCs)
+```
+```{r, comp_tree_linear, fig.cap="Comparison between Tree and linear booster"}
+boxplot( list(as.vector(poisson_AUCs), as.vector(tree_poisson_AUCs)))
+```
+
+We can see clearly, the difference between different booster (non-linear/tree-based vs linear) booster. 
 
 ## Comparison
 
