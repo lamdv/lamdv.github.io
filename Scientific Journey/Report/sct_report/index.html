@@ -88,7 +88,7 @@ pred.SCT &lt;- big_prodMat(G.test, beta)
 </code></pre>
 
 <h2 id="method-2-xgboost">Method 2: XGBoost</h2>
-<p>XGBoost provide slightly better result compare to SCT. However this result heavily depend on booster and objective selection. Experiments shown that <strong>gblinear</strong> booster with <strong>count:poisson</strong> objective give the best results. [^2]</p>
+<p>XGBoost provide slightly better result compare to SCT. However this result heavily depended on booster and objective selection. Experiments shown that <strong>gblinear</strong> booster with <strong>count:poisson</strong> objective give the best results. [^2]</p>
 <p>For experimentation, I run 9 different <em>max_depth</em> and 9 <em>nrounds</em>. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of <em>gblinear</em> booster</p>
 <pre><code class="r">AUCs &lt;- matrix(,nrow = 10, ncol = 10)
 for (i in seq(2 : 10)){
