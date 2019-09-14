@@ -125,7 +125,7 @@ for (i in seq(2 : 10)){
 <p>The following graph compare <em>gbtree</em> vs <em>gblinear</em>.</p>
 <p><img alt="Comparison between Tree and linear booster" src="../xgboost_fig/comp_tree_linear-1.png" /></p>
 <p>We can see clearly, the difference between different booster (non-linear/tree-based vs linear) booster. <em>gblinear</em> offer far more stable and better result compare to <em>gbtree</em> in this case.</p>
-<p>This result, however, might not reflex the whole situation. As demonstrated with <em>gblinear</em>, objective function play a major role in both performance and stability.</p>
+<p>This result, however, might not reflex the whole situation. As demonstrated with <em>gblinear</em>, objective function play a major role in both performance and stability. This, however, is far from conclusive on which objective function is the best, or rather, what criteria make a good objective function for such task. I suspect there is no heuristic for selecting such function, and trial-and-error is required (or pure luck). Furthermore, it is totally possible that there is an objective function that will work well with <em>gbtree</em> to provide a better result than <em>gblinear</em>.</p>
 <div class="footnote">
 <hr />
 <ol>
