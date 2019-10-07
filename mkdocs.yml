@@ -15,6 +15,7 @@ nav:
   - Scientific Journey:
     - Class Note @ENSIMAG:
       - 'Fundamental ML': 'Master/class notes/Fundamental ML/notes.md'
+      - 'Fundamental ML': 'Master/class notes/Fundamental ML/homework1.md'
     - 'Hành trình khoa học: Python và R': 'Scientific Journey/intro.md'
     - '(Những) ngày đầu tiên': 'Scientific Journey/day-one-ish.md'
     - 'Ghi chú bằng Markdown': 'Scientific Journey/day-two-documentation-markdown.md'
