@@ -181,4 +181,4 @@ We can see clearly, the difference between different booster (non-linear/tree-ba
 
 This result, however, might not reflex the whole situation. As demonstrated with *gblinear*, objective function play a major role in both performance and stability.
 
-[^1]: Original Rmd documment provided [here](https://github.com/lamdv/Script/blob/master/xgboost_report/xgboost_c%2Bt.Rmd)
+[^1]: Original Rmd documment provided [here](https://github.com/lamdv/Script/blob/master/xgboost_report/xgboost_c%2Bt.Rmd)https://squidfunk.github.io/mkdocs-material/getting-started/

@@ -13,6 +13,8 @@ nav:
   - Home: 'index.md'
   - Curriculum Vitae: 'CV.md'
   - Scientific Journey:
+    - Class Note @ENSIMAG:
+      - 'Fundamental ML': 'Master/class notes/Fundamental ML/notes.md'
     - 'Hành trình khoa học: Python và R': 'Scientific Journey/intro.md'
     - '(Những) ngày đầu tiên': 'Scientific Journey/day-one-ish.md'
     - 'Ghi chú bằng Markdown': 'Scientific Journey/day-two-documentation-markdown.md'
