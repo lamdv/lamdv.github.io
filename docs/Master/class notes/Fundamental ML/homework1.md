@@ -34,3 +34,5 @@ w^{(t+1)} &= w^t + \epsilon \times y \times x \\
 1. $(y_i\times (w*,x_i))>0$ mean the dot product of $w*$ and $x_i$ correctly predict the class of the output $y_i$.
 
 1. Since $\frac{w}{||w||}$ is a scalar product of *w* (also know as normalization), the product $y_i \times \langle \frac{w}{||w||}, x_i \rangle > 0$ for all $i$ (since $\forall i, y_i \times \langle w, x_i \rangle > 0$). Therefore $min_{i \in [1,..,m]}(y_i \times \langle \frac{w}{||w||}, x_i \rangle)$ is strickly positive.
+
+1. 

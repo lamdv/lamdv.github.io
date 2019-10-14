@@ -284,6 +284,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data Management/notes/" title="Data Management" class="md-nav__link">
+      Data Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Fundamental of Pro.Learning/notes/" title="Fundamental of Probabilistic Learning" class="md-nav__link">
+      Fundamental of Probabilistic Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../HPC/notes/" title="High Performance Computing" class="md-nav__link">
+      High Performance Computing
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -423,6 +459,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#vu-lam-dang-mosig-data-science" class="md-nav__link">
+    Vu-Lam DANG - MOSIG Data Science
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#algorithm" class="md-nav__link">
     Algorithm
   </a>
@@ -449,6 +492,7 @@
                 
                 
                 <h1 id="analysis-of-perceptron-algorithm">Analysis of Perceptron Algorithm</h1>
+<h4 id="vu-lam-dang-mosig-data-science">Vu-Lam DANG - MOSIG Data Science</h4>
 <h2 id="algorithm">Algorithm</h2>
 <p>The perceptron algorithm is one of the first supervised models proposed <em>(Rosenblatt, 1957)</em> . The algorithm is trained by finding the parameters of a linear function defined by</p>
 <p>
@@ -456,7 +500,7 @@
     h_w : \mathbb{R}^d &\mathbb{\rightarrow} \mathbb{R}\\    x &\mapsto \langle w, x \rangle
 \end{align}</script>
 </p>
-<p>using a training set <script type="math/tex">S=((x_i,y_i))^m_{i=1}</script> of size m where, <script type="math/tex">\langle .,.\rangle</script> denotes the dot product and the classes verify <script type="math/tex">\forall i \in \{1,...,m\}, y_i \in \{-1,+1\}</script>. The training of the model is done on-line following the perceptron update algorithm.</p>
+<p>using a training set <script type="math/tex">S=((x_i,y_i))^m_{i=1}</script> of size m where, <script type="math/tex">\langle .,.\rangle</script> denotes the dot product and the classes verify <script type="math/tex">\forall i \in \{1,...,m\}, y_i \in \{-1,+1\}</script>. The training of the model is done on-line following the perceptron update algorithm.41 mins ·</p>
 <ol>
 <li>
 <p>The algorithm randomly select a datapoint <script type="math/tex">(x_i, y_i)</script> and check with the current model (<script type="math/tex">w^t</script>) if the model correctly predict the outcome (<script type="math/tex">y_i</script>). <script type="math/tex">y \cdot (w \cdot x) = 1</script> iff <script type="math/tex">y = (w \cdot x)</script>. Indeed, if <script type="math/tex">y=1</script>, <script type="math/tex">y \cdot (w \cdot x) = 1</script> if and only if  <script type="math/tex">w \cdot x = 1</script> too, and vise versa for <script type="math/tex">y=-1</script>. Otherwise, <script type="math/tex">y \cdot (w \cdot x) = -1</script>.</p>
@@ -478,13 +522,16 @@ w^{(t+1)} &= w^t + \epsilon \times y \times x \\
       &= w^t - x_3
 \end{align*}</script>
 </p>
+<p><img alt="" src="../Fig/graph_hw1.jpg" /></p>
 </li>
 <li>
 <p>
 <script type="math/tex">(y_i\times (w*,x_i))>0</script> mean the dot product of <script type="math/tex">w*</script> and <script type="math/tex">x_i</script> correctly predict the class of the output <script type="math/tex">y_i</script>.</p>
 </li>
+<li>
+<p>Since <script type="math/tex">\frac{w}{||w||}</script> is a scalar product of <em>w</em> (also know as normalization), the product <script type="math/tex">y_i \times \langle \frac{w}{||w||}, x_i \rangle > 0</script> for all <script type="math/tex">i</script> (since <script type="math/tex">\forall i, y_i \times \langle w, x_i \rangle > 0</script>). Therefore <script type="math/tex">min_{i \in [1,..,m]}(y_i \times \langle \frac{w}{||w||}, x_i \rangle)</script> is strickly positive.</p>
+</li>
 </ol>
-<p>1</p>
                 
                   
                 
