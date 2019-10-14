@@ -1,5 +1,6 @@
 # Analysis of Perceptron Algorithm
 
+#### Vu-Lam DANG - MOSIG Data Science
 ## Algorithm
 
 The perceptron algorithm is one of the first supervised models proposed *(Rosenblatt, 1957)* . The algorithm is trained by finding the parameters of a linear function defined by
@@ -28,6 +29,8 @@ w^{(t+1)} &= w^t + \epsilon \times y \times x \\
           &= w^t - x_3
 \end{align*}
 
+    ![](Fig/graph_hw1.jpg)
+
 1. $(y_i\times (w*,x_i))>0$ mean the dot product of $w*$ and $x_i$ correctly predict the class of the output $y_i$.
 
-1. $\forall i\in\{1,..,m\}; y_i\times $ we have 
+1. Since $\frac{w}{||w||}$ is a scalar product of *w* (also know as normalization), the product $y_i \times \langle \frac{w}{||w||}, x_i \rangle > 0$ for all $i$ (since $\forall i, y_i \times \langle w, x_i \rangle > 0$). Therefore $min_{i \in [1,..,m]}(y_i \times \langle \frac{w}{||w||}, x_i \rangle)$ is strickly positive.
