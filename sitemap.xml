@@ -1,68 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://lamdv.github.io/</loc>
-     <lastmod>2019-10-14</lastmod>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://lamdv.github.io/CV/</loc>
-     <lastmod>2019-10-14</lastmod>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Master/class notes/Fundamental ML/notes/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Master/class%20notes/Fundamental%20ML/notes/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Master/class notes/Data Management/notes/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Master/class%20notes/Data%20Management/notes/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Master/class notes/Fundamental of Pro.Learning/notes/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Master/class%20notes/Fundamental%20of%20Pro.Learning/notes/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Master/class notes/HPC/notes/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Master/class%20notes/HPC/notes/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Scientific Journey/intro/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Scientific%20Journey/intro/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Scientific Journey/day-one-ish/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Scientific%20Journey/day-one-ish/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Scientific Journey/day-two-documentation-markdown/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Scientific%20Journey/day-two-documentation-markdown/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Scientific Journey/xgboost_c+t/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Scientific%20Journey/xgboost_c%2Bt/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://lamdv.github.io/Scientific Journey/Report/report/</loc>
-     <lastmod>2019-10-14</lastmod>
+    </url><url>
+     <loc>https://lamdv.github.io/Scientific%20Journey/Report/report/</loc>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
+     <loc>https://lamdv.github.io/Scientific%20Journey/machine%20learning%20machine%20learning_en/</loc>
+     <lastmod>2020-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://lamdv.github.io/Thought/the-death-of-expertise/</loc>
-     <lastmod>2019-10-14</lastmod>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://lamdv.github.io/Thought/on-writing/</loc>
-     <lastmod>2019-10-14</lastmod>
+     <lastmod>2020-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
