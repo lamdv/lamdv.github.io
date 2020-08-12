@@ -56,6 +56,9 @@
     - Graphical depiction of online update rule
     ![Graphical depiction of online update rule](Fig/FML_1.png)
 
+## Neural network
+
+2nd homework
 
 [^1]: email to: Massih-Reza.Amini@imag.fr 
 [^2]: Slides can be found [here](http://ama.liglab.fr/~amini/Cours/ML/MLF-MRA-1.pdf)

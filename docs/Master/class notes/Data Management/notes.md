@@ -143,6 +143,50 @@ reduce(key, values):
                 - Stream reading
         - Optimized for high throughput (high latency)
     
+## Spark[^3]
+1. Spark Internal
+    - Memory is faster than disk
+    - Cost of memory decreased -> more data to server
+    * Challenge: Fault Tolerance  
+    Failure is the norm, not the exception  
+    On a node failure, all data on that note is lost.
+1. Resilient Distributed Datasets
+    * Restricted form of distributed shared memory
+        * Read-only partitioned collection of records
+        * Creation of a RDD through deterministic op (transformations) on 
+            * Data stored on disk
+            * An existing RDD
+    * Transformation and actions  
+        Programming with RDDs  
+        * An RDD is represented as an object
+        * Programmer defines RDDs using Transformations
+            * Applied to data on disk or to existing RDDs
+            * Examples: map, filter, join
+        * Programmer use RDDs in Actions
+            * Operations that return a value or export data to the file system
+            * Examples: count, reduce
+1. Fault tolerance with Lineage  
+    Lineage = a description of an RDD
+    * The data source on disk
+    * the sequence of applied transformations
+        * Same transformation applied to all elements
+        * Low footprint for storing a lineage
+    * Fault tolerance
+        * RDD Partition lost
+            * Replay all transformation on the subset of input data or the most receent RDD available
+        * Deal with stragglers
+            * Generate a new copy of a partition on another node
+1. Spark Runtime
+    * Driver
+        * Executes the user program
+        * Defines RDDs and invokes actions
+        * Track RDD's lineage
+    * Worker 
+        * Store RDD partitions
+        * Perform transformations and actions
+            * Run taks
 
-[^1]: [slide Intro](https://tropars.github.io/downloads/lectures/LSDM/LSDM-1-introduction.pdf)
-[^2]: [slide Hadoop](https://tropars.github.io/downloads/lectures/LSDM/LSDM-2-mapreduce-hadoop.pdf)
+
+[^1]: [slide Intro](https://tropars.github.io/downloads/lectures/LSDM/LSDM-1-introduction.pdf)  
+[^2]: [slide Hadoop](https://tropars.github.io/downloads/lectures/LSDM/LSDM-2-mapreduce-hadoop.pdf)  
+[^3]: [slide Hadoop](https://tropars.github.io/downloads/lectures/LSDM/LSDM-3-spark.pdf)  

@@ -14,3 +14,8 @@
     Definition: the minimal set that D-separate a set of nodes from the rest of the graph.
 
 Construction: Given a directed acyclic graph and a node X, the Markov blanket of X $\beta_X$ is the set of all parents, children and co-parent of X
+
+## PCA (Principal Component Analysis)
+
+# Hidden Markove Model
+- Gaussian Mixture model
