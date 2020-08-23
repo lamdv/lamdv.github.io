@@ -23,6 +23,7 @@ nav:
     - 'Ghi chú bằng Markdown': 'Scientific Journey/day-two-documentation-markdown.md'
     - "XGBoost's objective function comparison" : 'Scientific Journey/xgboost_c+t.md' 
     - "Viable method to combine C+T predictors for enhanced prediction power" : 'Scientific Journey/Report/report.md' 
+    - 'Model Selection: Machine learning Machine Learning - Part 1' : 'Scientific Journey\machine learning machine learning_en.md'
   - Thought:
   #   - 'Nov 28 2017': 'Thought/nov-28-17.md'
   #   - 'Mỏi': 'Thought/tiresome.md'

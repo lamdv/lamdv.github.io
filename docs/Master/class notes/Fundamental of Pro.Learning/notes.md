@@ -19,3 +19,4 @@ Construction: Given a directed acyclic graph and a node X, the Markov blanket of
 
 # Hidden Markove Model
 - Gaussian Mixture model
+****
