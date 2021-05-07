@@ -1,6 +1,7 @@
 # Visualizing sequence data with Matplotlib
 
-##### *The dirty way*
+##### *The dirty way* [^1]
+
 
 There are probably many packages that take multiple sequences alignment and draw a pretty nice little visualization. However as a software engineer and bioinformatician, our time is probably better spend on algorithm than learning new packages, especially when it pretty one off. Furthermore, sometime it is important to have more control over our graph, including alignning elements, incorporate different metrics...
 
@@ -86,7 +87,7 @@ The algorithm is simple.
 
 Next come the conservation. The formular for conservation is:
 $$
-C_i = \sum_{j}^{j=N}\sqrt{(\frac{f_j}{N} - 0.05)^2}
+C_i = \sqrt\sum_{j}^{j=N}{(\frac{f_j}{N} - 0.05)^2}
 $$
 
 For $C_i$ is the conservation value of $i^{th}$ residue.
@@ -198,4 +199,4 @@ for i in range(0, L):
 Et voila! There you go, a quick and dirty way to visualize your sequence dataset. The code is (hopefully) simple enough so you can expanse on your own to other type of biological sequence data (Genomics, Trans...), and different graph can also be used as basis for visualizing your MSA. This, however, is not scalable to larger sequences. You will have to experiment on how best to show your data, but that's the fun of bioinfomatics! And now you have all the controls to do so.
 
 
-[^1]: The original notebook can be found here
+[^1]: The original notebook can be found [here](https://github.com/lamdv/lamdv.github.io/blob/source/docs/Sequence%20visualization%20with%20matplotlib.ipynb)
