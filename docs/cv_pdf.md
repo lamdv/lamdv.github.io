@@ -1,6 +1,6 @@
 # [DANG Vu Lam](#1)
 
-***M1 MoSIG, Universite Grenoble Alpes***<br>
+***MoSIG, Universite Grenoble Alpes***<br>
 
 ***Email***: [*dangv@etu.univ-grenoble-alpes.fr*](mailto:dangv@etu.univ-grenoble-alpes.fr)<br>***Personal Contact***: [*lam.dv@live.com*](mailto:lam.dv@live.com)<br>***Phone number***: (+33) 6 68 36 02 29
 
@@ -10,11 +10,11 @@
 
 *My current research interest including, but not limited to:*
 
+1. Bioinformatics: Genomics, Proteomics. Currently researching SCA and simulation of protein family.
 1. Neural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.
 1. Optimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.
 1. Data Science: Advance Data Structure, Indexing, Knowledge Representation.
-1. Application of Neural Networks: Bioinformatics, Robotics, Image Processing, Pattern Recognition.
-1. Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.
+2. Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.
 
 &nbsp;
 <hr/>
