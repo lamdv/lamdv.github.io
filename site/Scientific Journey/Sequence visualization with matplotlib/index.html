@@ -359,6 +359,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sequence%20visualization%20with%20matplotlib_vi/" class="md-nav__link">
+        Hiển thị dữ liệu chuỗi
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -553,7 +565,7 @@ for i in range(0, L):
 <p>The algorithm is simple. </p>
 <p>Next come the conservation. The formular for conservation is:
 <script type="math/tex; mode=display">
-C_i = \sqrt\sum_{j}^{j=N}{(\frac{f_j}{N} - 0.05)^2}
+C_i = \sqrt{\sum_{j}^{j=21}{(\frac{f_j}{N} - 0.05)^2}}
 </script>
 </p>
 <p>For <script type="math/tex">C_i</script> is the conservation value of <script type="math/tex">i^{th}</script> residue.</p>
@@ -590,7 +602,6 @@ seq_display = np.sort(np.random.randint(0,N,[5]))
     posit = -float(np.where(seq_display == j)[0]) * spacing_scale - spacing
     axes.text(-5,posit, &quot;Seq &quot;+(str(j+1)))
     for i in range(0, L):
-        # print(i/20,j/4)
         axes.text(float(i),posit, msa[j].seq[i],
             bbox=dict(facecolor=palette[aa.find(msa[j].seq[i])], 
             alpha=0.5),fontdict=font)
@@ -600,7 +611,6 @@ seq_display = np.sort(np.random.randint(0,N,[5]))
 <pre><code class="language-python">posit = posit - spacing
 axes.text(-5,posit, &quot;Concensus&quot;)
 for i in range(0, L):
-    # print(i/20,j/4)
     axes.text(float(i),posit, 'ARNDCQEGHILKMFPSTWYV-'[int(concensus[i])] ,
                 bbox=dict(facecolor=palette[int(concensus[i])], 
                 alpha=0.5),fontdict=font)
@@ -647,13 +657,13 @@ for i in range(0, L):
         </a>
       
       
-        <a href="../../Thought/the-death-of-expertise/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../Sequence%20visualization%20with%20matplotlib_vi/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              The Death of Expertise
+              Hiển thị dữ liệu chuỗi
             </div>
           </div>
           <div class="md-footer__button md-icon">

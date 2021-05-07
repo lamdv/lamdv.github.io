@@ -87,7 +87,7 @@ The algorithm is simple.
 
 Next come the conservation. The formular for conservation is:
 $$
-C_i = \sqrt\sum_{j}^{j=N}{(\frac{f_j}{N} - 0.05)^2}
+C_i = \sqrt{\sum_{j}^{j=21}{(\frac{f_j}{N} - 0.05)^2}}
 $$
 
 For $C_i$ is the conservation value of $i^{th}$ residue.
@@ -159,7 +159,6 @@ for j in seq_display:
     posit = -float(np.where(seq_display == j)[0]) * spacing_scale - spacing
     axes.text(-5,posit, "Seq "+(str(j+1)))
     for i in range(0, L):
-        # print(i/20,j/4)
         axes.text(float(i),posit, msa[j].seq[i],
             bbox=dict(facecolor=palette[aa.find(msa[j].seq[i])], 
             alpha=0.5),fontdict=font)
@@ -181,7 +180,6 @@ Finally we add the concensus sequence:
 posit = posit - spacing
 axes.text(-5,posit, "Concensus")
 for i in range(0, L):
-    # print(i/20,j/4)
     axes.text(float(i),posit, 'ARNDCQEGHILKMFPSTWYV-'[int(concensus[i])] ,
                 bbox=dict(facecolor=palette[int(concensus[i])], 
                 alpha=0.5),fontdict=font)
