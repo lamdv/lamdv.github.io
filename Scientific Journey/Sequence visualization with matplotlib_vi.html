@@ -2,7 +2,7 @@
     <html>
     <head>
         <meta charset="UTF-8">
-        <title>Visualizing sequence data with Matplotlib</title>
+        <title>Hi&#x1EC3;n th&#x1ECB; d&#x1EEF; li&#x1EC7;u chu&#x1ED7;i v&#x1EDB;i matplotlib</title>
         <style>
 </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
@@ -16,26 +16,24 @@
         
     </head>
     <body class="vscode-body">
-        <h1 id="visualizing-sequence-data-with-matplotlib">Visualizing sequence data with Matplotlib</h1>
+        <h1 id="hiển-thị-dữ-liệu-chuỗi-với-matplotlib">Hiển thị dữ liệu chuỗi với matplotlib</h1>
 <h5 id="the-dirty-way-1"><em>The dirty way</em> [^1]</h5>
-<p>There are probably many packages that take multiple sequences alignment and draw a pretty nice little visualization. However as a software engineer and bioinformatician, our time is probably better spend on algorithm than learning new packages, especially when it pretty one off. Furthermore, sometime it is important to have more control over our graph, including alignning elements, incorporate different metrics...</p>
-<p>In this tutorial we will try to visualize a short aa sequence (75 residues) with conservation calculated by norm distance to uniform distribution (it's not the best way to calculate conservation but... it's quick and dirty). Finally we display a concensus sequence, which is the most relevant amino acid at each residue. Again this is not exactly biologically correct, but that beside the point. You should be able quickly adapt this script to work on different data and different metrics.</p>
-<h2 id="the-idea">The idea</h2>
-<p>The idea behind this notebook is as we plot statistic at each residue, we draw the sequence directly underneath it. The reason this method even work is matplotlib draw on the figure in &quot;ticks space&quot;, as in the distance on the plot is calculated in data steps.</p>
-<p>So if we have a bar graph, we can quickly align vertically a text object simply by putting <code>plot.text()</code> at exactly x. Conversely of y, we need to calculate an offset from the bottom of the graph to the position we want to draw our text/residue/nucleotide acid. That simple.</p>
-<h2 id="prequisite">Prequisite</h2>
+<p>Có lẽ đã có rất nhiều package Python cho phép hiển thị dữ liệu Multiple Sequence Alignment (MSA). Tuy vậy, thời gian của kỹ sư phần mềm và nhà nghiên cứu tin sinh học có lẽ nên dành để suy nghĩ về thuật toán và phát triển phần mềm riêng hơn là ngồi học thêm một vài package mới. Đôi khi khác thì các package chưa chắc đã hiển thị đúng metrics và định dạng mà ta mong muốn. Trong notebook này mình sẽ thử hiển thị một dataset MSA ngắn (75 residues) và một biểu đồ cột cho thấy tính bảo toàn của từng residue sử dụng matplotlib. Phép tính độ bảo toàn này không đúng lắm, nhưng điều đó không quá quan trọng. Cuối cùng chúng ta cũng hiển thị một chuỗi đồng thuận, chuỗi này là từng amino acid có tỉ lệ cao nhất ở mỗi residue - một lần nữa, điều này có thể không chính xác về mặt sinh học, nhưng các bạn có thể thay đổi để cho phù hợp hơn với dữ liệu và thống kê của riêng mình.</p>
+<h2 id="ý-tưởng">Ý tưởng</h2>
+<p>Ý tưởng đằng sau biểu đồ này là dựa vào biểu đồ thống kê chính, chúng ta lần lượt đặt từng residue vào vị trí của nó dưới các cột biểu đồ. Bởi vì matplotlib xác định vị trí các đối tượng trong biểu đồ của mình qua &quot;data space&quot; hay các mốc vị trí dựa trên dữ liệu, chúng ta có thể &quot;hack&quot; nó để gióng hàng các residue của mình. Đơn giản vầy thui.</p>
+<h2 id="yêu-cầu">Yêu cầu</h2>
 <ol>
-<li>The necessary libraries</li>
+<li>Thư viện</li>
 </ol>
-<p>We need the following libraries: matplotlib (duh), BioPython and NumPy. BioPython is needed to effectively manage our MSA, although with parser and hard work you can read directly from fasta file. NumPy is needed to interface with matplotlib, and in general, who would not include NumPy in their tutorial these day</p>
+<p>Ta cần các thư viện sau: matplotlib (duh), BioPython và NumPy. BioPython dùng để quản lý, đọc và ghi các MSA, dù ta cũng có thể tự viết parser và đọc file FASTA trực tiếp - nhưng mà lười :D. NumPy dùng để tính toán và tương tác với matplotlib, ngoài ra thời này ai mà chẳng dùng numpy khi viết tutorial trên mạng cơ chứ...</p>
 <pre><code class="language-python"><div><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np, Bio, matplotlib.pyplot <span class="hljs-keyword">as</span> plot
 <span class="hljs-keyword">from</span> matplotlib.ticker <span class="hljs-keyword">import</span> FormatStrFormatter
 <span class="hljs-keyword">from</span> Bio <span class="hljs-keyword">import</span> SeqIO
 
 %matplotlib inline
 </div></code></pre>
-<ol start="2">
-<li>In order to display the sequence in a format we familiar with we need 2 things. First, because we intent to visualize our sequences in a sequence of boxes, each box represent a residue and we want the boxes to be align, we need a monospacing font family</li>
+<ol>
+<li>Để vẽ một cách chính xác, trước hết ta cần định nghĩa vài thứ. Trước tiên, chúng ta cần một họ font monospace để đảm bảo các residue sẽ được thẳng hàng. Monospace font có khoảng cách bằng nhau bất kể ký tự - chữ A và chữ I đều tốn diện tích như nhau. Dễ hiểu tại sao chúng ta cần font này phải không.</li>
 </ol>
 <pre><code class="language-python"><div>font = {<span class="hljs-string">&#x27;family&#x27;</span>: <span class="hljs-string">&#x27;monospace&#x27;</span>,
         <span class="hljs-string">&#x27;color&#x27;</span>:  <span class="hljs-string">&#x27;darkred&#x27;</span>,
@@ -43,7 +41,7 @@
         <span class="hljs-string">&#x27;size&#x27;</span>: <span class="hljs-number">16</span>,
         }
 </div></code></pre>
-<p>Secondly we need a color palette. There are 20 amino acid and one color for gap, which is displayed as a dash. The color I use here is a color palette used by RasMol package (holy f it's old)</p>
+<p>Tiếp theo chúng ta cần một cái bảng màu. Có 20 amino acid, và cần thêm 1 màu để hiển thị gap. Bảng màu mình sử dụng ở đây cũng là bảng màu được RasMol sử dụng (cái phần mềm này xưa như trái đất rồi holy f)</p>
 <pre><code class="language-python"><div>palette = [
     <span class="hljs-string">&#x27;#C8C8C8&#x27;</span>, <span class="hljs-string">&#x27;#145AFF&#x27;</span>, <span class="hljs-string">&#x27;#00DCDC&#x27;</span>, <span class="hljs-string">&#x27;#E60A0A&#x27;</span>, <span class="hljs-string">&#x27;#E6E600&#x27;</span>,
     <span class="hljs-string">&#x27;#00DCDC&#x27;</span>, <span class="hljs-string">&#x27;#E60A0A&#x27;</span>, <span class="hljs-string">&#x27;#EBEBEB&#x27;</span>, <span class="hljs-string">&#x27;#8282D2&#x27;</span>, <span class="hljs-string">&#x27;#0F820F&#x27;</span>, 
@@ -51,17 +49,17 @@
     <span class="hljs-string">&#x27;#FA9600&#x27;</span>, <span class="hljs-string">&#x27;#FA9600&#x27;</span>, <span class="hljs-string">&#x27;#B45AB4&#x27;</span>, <span class="hljs-string">&#x27;#3232AA&#x27;</span>, <span class="hljs-string">&#x27;#0F820F&#x27;</span>, 
     <span class="hljs-string">&#x27;#FFFFFF&#x27;</span>]
 </div></code></pre>
-<p>Finally we have a string of all possible amino acid + the gap</p>
+<p>Cuối cùng ta có một string chứa tất cả các amino acid có thể nhận, và khoảng trống</p>
 <pre><code class="language-python"><div>aa = <span class="hljs-string">&#x27;ARNDCQEGHILKMFPSTWYV-&#x27;</span>
 </div></code></pre>
-<h2 id="reading-stuff">Reading stuff...</h2>
-<p>First thing first: we read our MSA with the most basic numbers: length and number of sequences</p>
+<h2 id="đọc-đọc-đọc">Đọc đọc đọc...</h2>
+<p>Việc đầu tiên, đương nhiên là đọc cả chuỗi MSA và tính toán một số thông số cơ bản: Chiều dài chuỗi L và số chuỗi N.</p>
 <pre><code class="language-python"><div>fasta_file = <span class="hljs-string">&#x27;src/Inputs/example/1atzA.fas&#x27;</span>
 msa = list(SeqIO.parse(fasta_file,<span class="hljs-string">&#x27;fasta&#x27;</span>))
 L = len(msa[<span class="hljs-number">0</span>].seq)
 N = len(msa)
 </div></code></pre>
-<p>We calculate the frequency of each amino acid occurs at each residue next. We also calucate the concensus sequence at this stage</p>
+<p>Tính toán tần suất từng amino acid ở mỗi residue, và nhân tiện tính luôn chuỗi đồng thuận.</p>
 <pre><code class="language-python"><div>freq = np.zeros([L,<span class="hljs-number">21</span>])
 concensus = np.zeros(L)
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,N):
@@ -71,43 +69,44 @@ concensus = np.zeros(L)
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, L):
     concensus[i] = freq[i].argmax()
 </div></code></pre>
-<p>The algorithm is simple.</p>
-<p>Next come the conservation. The formular for conservation is:</p>
+<p>Chắc đoạn này dễ ha.</p>
+<p>Để tính toán độ bảo toàn, chúng ta dùng công thức như sau:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mi>j</mi><mrow><mi>j</mi><mo>=</mo><mn>21</mn></mrow></munderover><mrow><mo stretchy="false">(</mo><mfrac><msub><mi>f</mi><mi>j</mi></msub><mi>N</mi></mfrac><mo>−</mo><mn>0.05</mn><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_i = \sqrt{\sum_{j}^{j=21}{(\frac{f_j}{N} - 0.05)^2}}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.500304em;vertical-align:-1.4137769999999998em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.0865270000000002em;"><span class="svg-align" style="top:-5.460304000000001em;"><span class="pstrut" style="height:5.460304000000001em;"></span><span class="mord" style="padding-left:1.056em;"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8587770000000006em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.347113em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">2</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4137769999999998em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">5</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-4.046527000000001em;"><span class="pstrut" style="height:5.460304000000001em;"></span><span class="hide-tail" style="min-width:0.742em;height:3.5403040000000003em;"><svg width='400em' height='3.5403040000000003em' viewBox='0 0 400000 3540' preserveAspectRatio='xMinYMin slice'><path d='M702 80H40000040
 H742v3406l-4 4-4 4c-.667.7 -2 1.5-4 2.5s-4.167 1.833-6.5 2.5-5.5 1-9.5 1
 h-12l-28-84c-16.667-52-96.667 -294.333-240-727l-212 -643 -85 170
 c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
 219 661 l218 661zM702 80H400000v40H742z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4137769999999998em;"><span></span></span></span></span></span></span></span></span></span></p>
-<p>For <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">C_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the conservation value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow><annotation encoding="application/x-tex">i^{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">h</span></span></span></span></span></span></span></span></span></span></span></span> residue.</p>
-<p>Why 0.05? Because it's 1/20, and guess how many amino acid there is.</p>
-<p><em>(of course there are 21 possible values but this function wrong enough lol)</em></p>
+<p>với <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">C_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> là độ bảo toàn của residue thứ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>.</p>
+<p>Tại sao lại là 0.05? Bởi vì nó là <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>20</mn></mrow><annotation encoding="application/x-tex">1/20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">2</span><span class="mord">0</span></span></span></span>, và ở thì có 20 amino acid. Khoảng trống không tính...
+<em>(tất nhiên là có 21 giá trị có thể nhận được nhưng mà cái note này đủ bậy rồi lmao)</em></p>
 <pre><code class="language-python"><div>conservation = np.sqrt(np.sum((np.square(freq/N - <span class="hljs-number">0.05</span>)),axis=<span class="hljs-number">1</span>))
 </div></code></pre>
-<h2 id="now-the-fun-part-actually-drawing-the-msa">Now, the fun part: Actually drawing the MSA.</h2>
-<p>Because there is no native way to draw all the thing that go into this visualization, it look a bit messy. And also because all of this is quick, dirty, this will probably not the best way to do thing. But it's a way.</p>
+<h2 id="ok-đến-đoạn-vui">OK đến đoạn vui</h2>
+<p>Bởi vì không có cách nào có sẵn để vẽ cả mớ chuỗi này vào đồ thị, chỗ code dưới này nhìn sẽ khá rối rắm. Đồng thời nó cũng chưa chắc là cách ngon nhất để làm (chắc không phải đâu)... nhưng nó là một cách</p>
 <!-- *Notes: I put *````figure````* in places where I want to draw the figure **for demonstration purpose**. You may want to remove them when you recombine the code boxes in your notebook, otherwise it will draw multiple graph. On itself.* -->
-<p>First, we create  the figure with its axes. The figure is configured to be ultra wide, because the sequences are long <em>wink wink</em>.</p>
+<p>Trước tiên, tất nhiên ta tạo một đồ thị và các trục tương ứng. Cái đồ thị này được thiết lập khá rộng, vì cái chuỗi nhét vào nó dàii <em>wink wink</em>.</p>
 <pre><code class="language-python"><div>figure = plot.figure(figsize=(<span class="hljs-number">20</span>,<span class="hljs-number">2</span>))
 axes = plot.axes([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]);
 plot.close()
 </div></code></pre>
-<p>Now, to draw the conservation graph. It's a simple bargraph which display at each residue what is the conservation rate according to the formular provided previously.</p>
-<p>Reminder: to call bargraph: <code>axes.bar(range,data,**args)</code>. It is also important to have <code>align='edge', linewidth=0</code> for alignment purpose. <code>align='edge'</code> make the bar aligned on the right of the ticks, and <code>linewidth=0</code> make the spacing between ticks correct.</p>
+<p>OK giờ đến lúc vẽ cái đồ thị về độ bảo toàn. nó đơn giản chỉ là một cái bar graph cho thấy độ bảo toàn ở từng residue.</p>
+<p>Reminder: để gọi bargraph: <code>axes.bar(range,data,**args)</code>. Trong trường hợp này chúng ta cần các parameters <code>align='edge', linewidth=0</code> để gióng hàng các amino acid. <code>align='edge'</code> làm cho các cột gióng hàng ở cạnh trái, và <code>linewidth=0</code> làm cho khoảng cách các cột khít hơn.</p>
 <pre><code class="language-python"><div>axes.bar(range(<span class="hljs-number">0</span>,L),conservation, align=<span class="hljs-string">&#x27;edge&#x27;</span>, linewidth = <span class="hljs-number">0</span>, color = <span class="hljs-string">&#x27;red&#x27;</span>)
 axes.set_ylabel(<span class="hljs-string">&#x27;Conservation&#x27;</span>)
 </div></code></pre>
 <p><img src="file:///d:\Project\Writing\lamdv.github.io\docs\Scientific Journey\Sequence%20visualization%20with%20matplotlib_files\Sequence%20visualization%20with%20matplotlib_21_0.svg" alt="svg"></p>
-<p>Next step we draw the sequences. We choose randomly 5 sequences from the MSA, because to display all 1000 MSA of this dataset is simply ... unrealistic. We also calculate the spacing between each sequences, as well as spacing between the bottom of the conservation graph to the first sequence displayed.</p>
-<p>The spacing scale is calculated by taking the limit of y and divided by 6. Why? Because it work for our particular font and spacing...</p>
+<p>Giờ đến lúc vẽ các chuỗi. Chúng ta lấy ra 5 chuỗi ngẫu nhiên từ MSA, đơn giản vì với 1000 chuỗi thì data của mình quá rộng để có thể vẽ tất cả. Đồng thời chúng ta tính toán khoảng cách giữa các chuỗi, cũng như khoảng cách từ đáy đồ thị đến chuỗi đầu tiên.</p>
+<p>Khoảng cách giữa các chuỗi được tính bằng cận của trục y chia 6. Tại sao? Vì chia 6 nó khớp hàng 😅, không có giải thích nào hay hơn cả ...</p>
 <pre><code class="language-python"><div>spacing_scale = axes.get_ylim()[<span class="hljs-number">1</span>]/<span class="hljs-number">6</span>
 spacing = spacing_scale*<span class="hljs-number">2</span>
 
 seq_display = np.sort(np.random.randint(<span class="hljs-number">0</span>,N,[<span class="hljs-number">5</span>]))
 </div></code></pre>
-<p>So now, where to draw our sequence? For each sequence we calculate the y-offset from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0, 0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span> position in data space. Then the x position of each residue is simply its position in the sequence... Prety neat indeed.</p>
-<p>The following code block go like: For each sequence, calculate the basic position (0,posit), where posit = the place of sequence times the scale minus an offset. <code>axes.text()</code> is called to draw the sequence title. Finally, each residue is draw by <code>axes.text()</code> with the x position is the position of the residue itself, and a bbox draw over the text. We feed the bbox the color according to the palette, and an <code>alpha=0.5</code> so it's see through.</p>
-<p>Oh, and remember to add <code>fontdict=font</code> for our monospacing font set</p>
+<p>Ok, giờ thì làm sao mà vẽ?</p>
+<p>Với mỗi chuỗi, trước tiên ta tính toán khoảng cách đến gốc tọa độ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0, 0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span>. Vị trí trục x của từng residue được tính toán đơn giản là vị trí của chính nó trong chuỗi. Khá gọn. Tiêu đề của từng chuỗi được vẽ dịch về bên trái bằng cách lấy giá trị x âm, và trong trường hợp này ta lấy là -5.</p>
+<p><code>axes.text()</code> được gọi để vẽ từng residue. Với mỗi residue chúng ta có một cái bbox vẽ đè lên. Các bbox này có <code>alpha=0.5</code> để nó  trong suốt, và màu như trong palette màu đã định nghĩa ở trên.</p>
+<p>À mà nhớ dùng <code>fontdict=font</code> để xài cái font family nãy nhé.</p>
 <pre><code class="language-python"><div><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> seq_display:
     posit = -float(np.where(seq_display == j)[<span class="hljs-number">0</span>]) * spacing_scale - spacing
     axes.text(<span class="hljs-number">-5</span>,posit, <span class="hljs-string">&quot;Seq &quot;</span>+(str(j+<span class="hljs-number">1</span>)))
@@ -117,7 +116,7 @@ seq_display = np.sort(np.random.randint(<span class="hljs-number">0</span>,N,[<s
             alpha=<span class="hljs-number">0.5</span>),fontdict=font)
 </div></code></pre>
 <p><img src="file:///d:\Project\Writing\lamdv.github.io\docs\Scientific Journey\Sequence%20visualization%20with%20matplotlib_files\Sequence%20visualization%20with%20matplotlib_25_0.svg" alt="svg"></p>
-<p>Finally we add the concensus sequence:</p>
+<p>Cuối cùng, chúng ta thêm chuỗi đồng thuận:</p>
 <pre><code class="language-python"><div>posit = posit - spacing
 axes.text(<span class="hljs-number">-5</span>,posit, <span class="hljs-string">&quot;Concensus&quot;</span>)
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, L):
@@ -126,8 +125,8 @@ axes.text(<span class="hljs-number">-5</span>,posit, <span class="hljs-string">&
                 alpha=<span class="hljs-number">0.5</span>),fontdict=font)
 </div></code></pre>
 <p><img src="file:///d:\Project\Writing\lamdv.github.io\docs\Scientific Journey\Sequence%20visualization%20with%20matplotlib_files\Sequence%20visualization%20with%20matplotlib_27_0.svg" alt="svg"></p>
-<p>Et voila! There you go, a quick and dirty way to visualize your sequence dataset. The code is (hopefully) simple enough so you can expanse on your own to other type of biological sequence data (Genomics, Trans...), and different graph can also be used as basis for visualizing your MSA. This, however, is not scalable to larger sequences. You will have to experiment on how best to show your data, but that's the fun of bioinfomatics! And now you have all the controls to do so.</p>
-<p>[^1]: The original notebook can be found <a href="https://github.com/lamdv/lamdv.github.io/blob/source/docs/Sequence%20visualization%20with%20matplotlib.ipynb">here</a></p>
+<p>Et voila! Đây là một cách nhanh (và bẩn) để hiển thị dataset. Mình hi vọng nó đủ đơn giản để các bạn có thể tự biển đổi nó cho từng loại dữ liệu riêng (Genomics, transcriptomics...), và cũng như dùng các loại đồ thị khác làm nền tảng. Tuy nhiên, phương pháp này có lẽ không phải là cách tốt nhất để hiển thị các chuỗi dài hơn - bạn phải tự tìm đường phù hợp nhất với dữ liệu của mình. Nhưng đó là điều hay ho khi làm Bioinfomatics!!! Và giờ thì bạn có toàn quyền kiểm soát trên quá trình rồi.</p>
+<p>[^1]: Notebook Jupyter gốc (tiếng Anh) thì ở <a href="https://github.com/lamdv/lamdv.github.io/blob/source/docs/Sequence%20visualization%20with%20matplotlib.ipynb">đây</a></p>
 
     </body>
     </html>
