@@ -317,8 +317,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-dirty-way" class="md-nav__link">
-    The dirty way
+  <a href="#the-dirty-way-1" class="md-nav__link">
+    The dirty way 1
   </a>
   
 </li>
@@ -444,8 +444,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-dirty-way" class="md-nav__link">
-    The dirty way
+  <a href="#the-dirty-way-1" class="md-nav__link">
+    The dirty way 1
   </a>
   
 </li>
@@ -496,7 +496,7 @@
                 
                 
                 <h1 id="visualizing-sequence-data-with-matplotlib">Visualizing sequence data with Matplotlib</h1>
-<h5 id="the-dirty-way"><em>The dirty way</em></h5>
+<h5 id="the-dirty-way-1"><em>The dirty way</em> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h5>
 <p>There are probably many packages that take multiple sequences alignment and draw a pretty nice little visualization. However as a software engineer and bioinformatician, our time is probably better spend on algorithm than learning new packages, especially when it pretty one off. Furthermore, sometime it is important to have more control over our graph, including alignning elements, incorporate different metrics...</p>
 <p>In this tutorial we will try to visualize a short aa sequence (75 residues) with conservation calculated by norm distance to uniform distribution (it's not the best way to calculate conservation but... it's quick and dirty). Finally we display a concensus sequence, which is the most relevant amino acid at each residue. Again this is not exactly biologically correct, but that beside the point. You should be able quickly adapt this script to work on different data and different metrics.</p>
 <h2 id="the-idea">The idea</h2>
@@ -553,7 +553,7 @@ for i in range(0, L):
 <p>The algorithm is simple. </p>
 <p>Next come the conservation. The formular for conservation is:
 <script type="math/tex; mode=display">
-C_i = \sum_{j}^{j=N}\sqrt{(\frac{f_j}{N} - 0.05)^2}
+C_i = \sqrt\sum_{j}^{j=N}{(\frac{f_j}{N} - 0.05)^2}
 </script>
 </p>
 <p>For <script type="math/tex">C_i</script> is the conservation value of <script type="math/tex">i^{th}</script> residue.</p>
@@ -611,7 +611,7 @@ for i in range(0, L):
 <hr />
 <ol>
 <li id="fn:1">
-<p>The original notebook can be found here&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>The original notebook can be found <a href="https://github.com/lamdv/lamdv.github.io/blob/source/docs/Sequence%20visualization%20with%20matplotlib.ipynb">here</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
