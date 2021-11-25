@@ -1,8 +1,11 @@
 # [DANG Vu Lam](#1)
 
-***MoSIG, Universite Grenoble Alpes***<br>
+**Researcher (PhD candidate) <br>**
+***Center for Bioinformatics, Saarland University***
 
-***Email***: [*dangv@etu.univ-grenoble-alpes.fr*](mailto:dangv@etu.univ-grenoble-alpes.fr)<br>***Personal Contact***: [*lam.dv@live.com*](mailto:lam.dv@live.com)<br>***Phone number***: (+33) 6 68 36 02 29
+***Email***: [*TBD*]()<br>
+***Personal Contact***: [*lam.dv@live.com*](mailto:lam.dv@live.com)<br>
+***Phone number***: (+33) 6 68 36 02 29 
 
 [*Github*](https://github.com/lamdv) | [*Linkedin*](https://www.linkedin.com/in/dang-vu-lam-308497b0/) | [*Webpage*](https://lamdv.github.io/)
 
@@ -26,7 +29,7 @@
 
 ### Universtiy Grenoble Alpes
 
-Sep. 2018 - Current<br>
+2018 - 2021<br>
 *Master of Science in Informatics*<br>
 UFR IMAG and ENSIMAG<br>&nbsp;<br>
 
@@ -51,6 +54,19 @@ Sep 2010 - Sep 2013
 
 ## WORKING EXPRIENCES
 
+### Master Research Project, TIMC Laboratory
+*Mar 2021 - Sep 2021*
+
+Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
+
+**Position**: Programmer, Researcher.
+
+### Master Research Project, TIMC Laboratory
+*Mar 2019 – Sep 2019*
+
+Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
+
+**Position**: Programmer, Researcher.
 ### rRice project, IRD
 *Oct 2017 – Aug 2018*
 
