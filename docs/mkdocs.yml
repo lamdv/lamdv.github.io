@@ -7,7 +7,7 @@ theme:
 remote_branch: master
 repo_url: https://github.com/lamdv/lamdv.github.io
 edit_uri: edit/source/docs/
-docs_dir: docs
+docs_dir: ./
 site_dir: site
 nav:
   - Home: 'index.md'
