@@ -31,7 +31,8 @@ nav:
   #   - 'Mỏi': 'Thought/tiresome.md'
     - 'The Death of Expertise' : 'Thought/the-death-of-expertise.md'
     - 'Về chuyện viết lách' : 'Thought/on-writing.md'
-    # - 'AI Presentation - Agoda' : 'Thought/presentation.md'
+    # - 'AI Presentation - Agoda' : 'Thought/presentation.md' 
+    
     # - 'Tiêu chuẩn Tạo Tác' : 'taotac/a-survey-of-mounting.md'
 
 extra_javascript: 
@@ -44,3 +45,4 @@ markdown_extensions:
     - mdx_math :
         enable_dollar_delimiter: True
     - footnotes :
+   
