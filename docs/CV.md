@@ -54,17 +54,14 @@ Sep 2010 - Sep 2013
 
 ## WORKING EXPRIENCES
 
+### Researcher (Doctoral), Center for Bioinformatics, Saarland University
+*Dec 2021 - Present*
+
 ### Master Research Project, TIMC Laboratory
 *Mar 2021 - Sep 2021*
 
-Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
-
-**Position**: Programmer, Researcher.
-
 ### Master Research Project, TIMC Laboratory
 *Mar 2019 – Sep 2019*
-
-Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
 
 **Position**: Programmer, Researcher.
 ### rRice project, IRD
