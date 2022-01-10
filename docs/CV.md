@@ -55,15 +55,10 @@ Falcuty of Information and Communication Technology<br>&nbsp;<br>
 ### Master Research Project, TIMC Laboratory
 *Mar 2021 - Sep 2021*
 
-
-**Position**: Programmer, Researcher.
-
 ### Master Research Project, TIMC Laboratory
 *Mar 2019 – Sep 2019*
 
-
-**Position**: Programmer, Researcher
-
+**Position**: Programmer, Researcher.
 ### rRice project, IRD
 *Oct 2017 – Aug 2018*
 
