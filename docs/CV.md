@@ -16,11 +16,11 @@
 
 *My current research interest including, but not limited to:*
 
-1. Bioinformatics: Genomics, Proteomics. Currently researching SCA and simulation of protein family.
-1. Neural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.
-1. Optimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.
-1. Data Science: Advance Data Structure, Indexing, Knowledge Representation.
-2. Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.
+1. Bioinformatics: Genomics, Proteomics. Meta-omics are currently in reading list
+2. Neural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.
+3. Optimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.
+4. Data Science: Advance Data Structure, Indexing, Knowledge Representation.
+5. Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.
 
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
@@ -42,31 +42,28 @@ Oct. 2013 - Oct 2017<br>
 Falcuty of Information and Communication Technology<br>&nbsp;<br>
 ***Thesis topic**: Extreme Learning Machine*
 
-<hr>
-
-### Nguyen Tat Thanh High School
-
-*Hanoi National University of Education*<br>
-Sep 2010 - Sep 2013
-
 &nbsp;
 <hr style="height:1px;border:none;color:#333;background-color:#333;"/>
 
 ## WORKING EXPRIENCES
 
+### Center for Bioinformatics, Saarland University
+*Dec 2021 - Current*
+
+**Position** Researcher, PhD Candidate
+
 ### Master Research Project, TIMC Laboratory
 *Mar 2021 - Sep 2021*
 
-Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
 
 **Position**: Programmer, Researcher.
 
 ### Master Research Project, TIMC Laboratory
 *Mar 2019 – Sep 2019*
 
-Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.
 
-**Position**: Programmer, Researcher.
+**Position**: Programmer, Researcher
+
 ### rRice project, IRD
 *Oct 2017 – Aug 2018*
 
