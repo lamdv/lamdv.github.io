@@ -1,6 +1,8 @@
 # Proposal for scientific software: PySeqView (tentative)
 
-***Supervisor:*** Vu-Lam Dang, Professor Sven Rahmann.
+We are looking for a Bachelor student to work on a possible software for sequence editing and visualization software. This topic should constitute a Bachelor thesis. I will be the direct supervisor, with Professor Rahmann advise.
+
+***Supervisor:*** Vu-Lam Dang.
 
 ***Abstract:*** Sequence management, alignment editing and figure generation is an important task performed daily by biologists. One of the most widely used tools in use for such tasks is BioEdit [^1]. However, BioEdit is no longer being maintained, and thus we propose the creation of a new open-source software package that aims to replace BioEdit.
 
