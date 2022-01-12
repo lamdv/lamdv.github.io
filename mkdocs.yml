@@ -26,7 +26,7 @@ nav:
     - 'Model Selection: Machine learning Machine Learning - Part 1' : 'Scientific Journey\machine learning machine learning_en.md'
     - 'Visualizing Sequence data with Matplotlib' : 'Scientific Journey\Sequence visualization with matplotlib.md'
     - 'Hiển thị dữ liệu chuỗi' : 'Scientific Journey\Sequence visualization with matplotlib_vi.md'
-    - 'Internships available at Algorithmic Bioinformatics team' : 'Scientific Journey\proposal.md'
+    - 'Internships available at Algorithmic Bioinformatics team' : 'Scientific Journey/proposal.md'
   - Thought:
   #   - 'Nov 28 2017': 'Thought/nov-28-17.md'
   #   - 'Mỏi': 'Thought/tiresome.md'
