@@ -1,6 +1,6 @@
 ---
 marp: true
-
+author: "Vu Lam DANG"
 ---
 
 # NMF: An overview of Non negative matrix factorization
@@ -43,14 +43,17 @@ One can try to penalize NMF ($l1$ or $l2$ norm)
 
 ## Improvement
 
+---
+
+### Nonlinear NMF
 <!-- We are pursing several avenue of improvement for the traditional NMF algorithm. -->
 
 - Non linear function:
-  - Formulation: 
+  - Reformulation of NMF:
   $$
     X = f_W(H)
   $$
-  where $f_W(H) = A\cdot H$
+  where $f_W(H) = W\cdot H$
   - Instead of a linear $f_W$, we subtitute with a slightly non linear function $f'_W$
   - Several choices for $f'$:
-    - ReLU: $f'(x) = A\cdot max(x-T, 0)$
+    - ReLU: $f'(x) = A\cdot \max(x-T, 0)$
