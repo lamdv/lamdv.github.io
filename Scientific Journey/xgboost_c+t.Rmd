@@ -1,0 +1,239 @@
+---
+title: "Survey on xgboost's objective functions"
+author: "VuLamDANG"
+date: "August 26, 2019"
+output: 
+  html_document:
+    keep_md: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(fig.path = 'xgboost_fig/')
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(cache.lazy = FALSE)
+
+directory <- "../simus"
+file_sumstat <- "sumstats.txt"
+file_train <- "data_train"
+file_test <- "data_test"
+```
+## Prequisites
+
+The following packages are required to knit this document:
+
+- bigstatsr
+- bigsnpr
+- data.table
+- xgboost
+
+```{r, packages, warning=FALSE}
+library(bigstatsr)
+library(bigsnpr)
+library(lassosum)
+library(data.table)
+library(xgboost)
+```
+
+##Dataset
+
+*Please change working direction in `directory`*
+
+I use the "Simus" simulated dataset provided by Florian. This dataset contain ~650,000 SNPs in 2 chromosomes. 20% of them are cases and the rest 80% are controls.
+
+
+```{r, load_data, warning=FALSE, message = FALSE}
+setwd(directory) 
+# Train data
+sumstats <- bigreadr::fread2(file_sumstat)
+# snp_readBed(paste(file_train, "bed", sep='.'))
+train <- snp_attach(paste(file_train, "rds", sep='.'))
+G.train <- train$genotypes
+CHR <- train$map$chromosome
+POS <- train$map$physical.pos
+NCORES <- nb_cores()
+lpval <- -log10(sumstats$pval)
+y.train <- train$fam$affection
+
+# Test data
+# snp_readBed(paste(file_test, "bed", sep='.'))
+test <- snp_attach(paste(file_test, "rds", sep='.'))
+G.test <- test$genotypes
+
+# Misc
+mean_AUCS <- c(0,0)
+```
+
+## C+T step
+Generating a matrix of C+T with varied clumping radius and $p-value$ thresholds.
+
+$\beta s$ and $p-values$ are aquired in sumstats file (see `sumstats.txt`)
+
+```{r, C+T,}
+all_keep <- snp_grid_clumping(G.train, CHR, POS, lpval, ncores = NCORES)
+PRS <-snp_grid_PRS(G.train,all_keep = all_keep, betas = sumstats$beta,lpval)
+PRS_test <- snp_grid_PRS(G.test, all_keep = all_keep, betas = sumstats$beta,lpval)
+
+```
+
+XGBoost only accept dataframe, so all FBM output must be converted to data frame
+
+```{r, }
+# Convert to dataframe for non-FBM based methods
+ds<-PRS[]
+y.train <- train$fam$affection
+PRS.df <- as.data.frame(ds)
+cols <- colnames(PRS.df)
+PRS.df$newcolumn <- y.train
+colnames(PRS.df) <- append(cols, "y")
+```
+
+## Data treatment: Oversampling
+
+To oversampling I extract all positive (*affection = 1*), and append them a number of times. For this simulated dataset, I enhanced the number of cases 10 times, thus the ratio become ~70:30 (from 20:80).
+
+```{r, Data-treatment, }
+y_case <- which(train$fam$affection %in% c(1))
+for (i in seq(1, 10)){
+  y.train <- append(y.train, train$fam$affection[y_case])
+  ds <- rbind(ds, PRS[y_case,])
+}
+ds.FBM <- as_FBM(ds)
+```
+
+##XGBoost
+
+XGBoost provide slightly better result compare to SCT. However this result heavily depend on booster and objective selection. Experiments shown that **gblinear** booster with **count:poisson** objective give the best results.
+
+For the first experimentation, I run 9 different *max_depth* and 9 *nrounds* with *count:poisson* objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of *gblinear* booster
+
+```{r, xgboost_poisson, echo=TRUE, results=FALSE}
+poisson_AUCs <- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp <- c()
+    for(t in seq(1:10)){
+      bstSparse <- xgboost(data = ds[], 
+                           label = y.train, 
+                           booster="gblinear",
+                           max_depth = i, 
+                           eta = 1, 
+                           nthread = 2, 
+                           nrounds = j, 
+                           lambda = 0.1,
+                           objective = "count:poisson"
+                           )
+      pred <- predict(bstSparse, PRS_test[])
+      temp <- append(temp,AUC(pred = pred, test$fam$affection))
+    }
+    poisson_AUCs[i,j] <- mean(temp)
+  }
+}
+```
+```{r,result_poisson, fig.cap="Poisson objective"}
+poisson_AUCs
+boxplot(poisson_AUCs)
+```
+
+I omitted the code for the next 2 experiments as they are largely similar, with exception of the option *objective* for *xgboost* function.
+
+For the next experimentation, I run 9 different *max_depth* and 9 *nrounds* with *reg:logistic* objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of *gblinear* booster
+
+```{r, xgboost_log, include=FALSE, }
+logistic_AUCs <- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp <- c()
+    for(t in seq(1:10)){
+      bstSparse <- xgboost(data = ds[], 
+                           label = y.train, 
+                           booster="gblinear",
+                           max_depth = i, 
+                           eta = 1, 
+                           nthread = 2, 
+                           nrounds = j, 
+                           lambda = 0.1,
+                           objective = "reg:logistic"
+                           )
+      pred <- predict(bstSparse, PRS_test[])
+      temp <- append(temp,AUC(pred = pred, test$fam$affection))
+    }
+    logistic_AUCs[i,j] <- mean(temp)
+  }
+}
+```
+```{r,result_log, fig.cap="Logistic objective"}
+boxplot(logistic_AUCs)
+```
+
+For the final experimentation, I run 9 different *max_depth* and 9 *nrounds* with *binary:logicraw* objective function. This function is interesting since it's specific for binary classification.
+
+```{r, xgboost_bilog, include=FALSE, }
+bilog_AUCs <- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp <- c()
+    for(t in seq(1:10)){
+      bstSparse <- xgboost(data = ds[], 
+                           label = y.train, 
+                           booster="gblinear",
+                           max_depth = i, 
+                           eta = 1, 
+                           nthread = 2, 
+                           nrounds = j, 
+                           lambda = 0.1,
+                           objective = "reg:logistic"
+                           )
+      pred <- predict(bstSparse, PRS_test[])
+      temp <- append(temp,AUC(pred = pred, test$fam$affection))
+    }
+    bilog_AUCs[i,j] <- mean(temp)
+  }
+}
+```
+```{r,result_bilog, fig.cap='Binary Logistic objective'}
+boxplot(bilog_AUCs)
+```
+
+## The effect of Boosters
+
+```{r, xgboost_tree_poisson, echo=TRUE, results=FALSE}
+tree_poisson_AUCs <- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp <- c()
+    bstSparse <- xgboost(data = ds[], 
+                         label = y.train, 
+                         booster="gbtree",
+                         max_depth = i, 
+                         eta = 1, 
+                         nthread = 2, 
+                         nrounds = j, 
+                         lambda = 0.1,
+                         objective = "count:poisson"
+                         )
+    pred <- predict(bstSparse, PRS_test[])
+    tree_poisson_AUCs[i,j] <- append(temp,AUC(pred = pred, test$fam$affection))
+  }
+}
+```
+```{r,result_tree_poisson, fig.cap="Poisson objective w/ Tree booster"}
+tree_poisson_AUCs
+boxplot(tree_poisson_AUCs)
+```
+```{r, comp_tree_linear, fig.cap="Comparison between Tree and linear booster"}
+boxplot( list(as.vector(poisson_AUCs), as.vector(tree_poisson_AUCs)))
+```
+
+We can see clearly, the difference between different booster (non-linear/tree-based vs linear) booster. 
+
+## Comparison
+
+Here is a composite boxplot comparing different objective functions. Index 1 is *count:poisson*, 2 is *reg:logistic* and 3 is *binary:logistic*
+
+```{r, comp, fig.cap="Comparision between Objective Functions"}
+AUCs <- list(as.vector(poisson_AUCs),as.vector(logistic_AUCs),as.vector(bilog_AUCs))
+boxplot(AUCs)
+```

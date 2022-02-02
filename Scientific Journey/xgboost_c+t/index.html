@@ -1,0 +1,775 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="VuLamDANG">
+      
+      
+        <link rel="canonical" href="https://lamdv.github.io/Scientific%20Journey/xgboost_c%2Bt/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+    
+    
+      
+        <title>Survey on xgboost's objective functions - Liam</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prequisites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liam" class="md-header__button md-logo" aria-label="Liam" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liam
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Survey on xgboost's objective functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lamdv/lamdv.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liam" class="md-nav__button md-logo" aria-label="Liam" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Liam
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lamdv/lamdv.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CV/" class="md-nav__link">
+        Curriculum Vitae
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Scientific Journey
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scientific Journey" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Scientific Journey
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          XGBoost's objective function comparison
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        XGBoost's objective function comparison
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prequisites" class="md-nav__link">
+    Prequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ct-step" class="md-nav__link">
+    C+T step
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-treatment-oversampling" class="md-nav__link">
+    Data treatment: Oversampling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xgboost" class="md-nav__link">
+    XGBoost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-effect-of-boosters" class="md-nav__link">
+    The effect of Boosters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Report/report/" class="md-nav__link">
+        Viable method to combine C+T predictors for enhanced prediction power
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine%20learning%20machine%20learning_en/" class="md-nav__link">
+        Model Selection: Machine learning Machine Learning - Part 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sequence%20visualization%20with%20matplotlib/" class="md-nav__link">
+        Visualizing Sequence data with Matplotlib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sequence%20visualization%20with%20matplotlib_vi/" class="md-nav__link">
+        Hiển thị dữ liệu chuỗi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposal/" class="md-nav__link">
+        Internships available at Algorithmic Bioinformatics team
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Thought
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Thought" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Thought
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Thought/the-death-of-expertise/" class="md-nav__link">
+        The Death of Expertise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Thought/on-writing/" class="md-nav__link">
+        Về chuyện viết lách
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prequisites" class="md-nav__link">
+    Prequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ct-step" class="md-nav__link">
+    C+T step
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-treatment-oversampling" class="md-nav__link">
+    Data treatment: Oversampling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xgboost" class="md-nav__link">
+    XGBoost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-effect-of-boosters" class="md-nav__link">
+    The effect of Boosters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/lamdv/lamdv.github.io/edit/source/docs/Scientific Journey/xgboost_c+t.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+  <h1>XGBoost's objective function comparison</h1>
+
+<p>In this document I go in depth into using XGBoost to enhence the performance of C+T by combining multiple C+T predictors. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="prequisites">Prequisites</h2>
+<p>The following packages are required to knit this document:</p>
+<ul>
+<li>bigstatsr</li>
+<li>bigsnpr</li>
+<li>data.table</li>
+<li>xgboost</li>
+</ul>
+<h2 id="dataset">Dataset</h2>
+<p><em>Please change working direction in <code>directory</code></em></p>
+<p>I use the "Simus" simulated dataset provided by Florian. This dataset contain ~650,000 SNPs in 2 chromosomes. 20% of them are cases and the rest 80% are controls.</p>
+<h2 id="ct-step">C+T step</h2>
+<p>Generating a matrix of C+T with varied clumping radius and <script type="math/tex">p-value</script> thresholds.</p>
+<p>
+<script type="math/tex">\beta s</script> and <script type="math/tex">p-values</script> are aquired in sumstats file (see <code>sumstats.txt</code>)</p>
+<p>XGBoost only accept dataframe, so all FBM output must be converted to data frame</p>
+<h2 id="data-treatment-oversampling">Data treatment: Oversampling</h2>
+<p>To oversampling I extract all positive (<em>affection = 1</em>), and append them a number of times. For this simulated dataset, I enhanced the number of cases 10 times, thus the ratio become ~70:30 (from 20:80).</p>
+<h2 id="xgboost">XGBoost</h2>
+<p>XGBoost provide slightly better result compare to SCT. However this result heavily depend on booster and objective selection. Experiments shown that <strong>gblinear</strong> booster with <strong>count:poisson</strong> objective give the best results.</p>
+<p>For the first experimentation, I run 9 different <em>max_depth</em> and 9 <em>nrounds</em> with <em>count:poisson</em> objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of <em>gblinear</em> booster</p>
+<pre><code class="language-r">poisson_AUCs &lt;- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp &lt;- c()
+    for(t in seq(1:10)){
+      bstSparse &lt;- xgboost(data = ds[], 
+                           label = y.train, 
+                           booster=&quot;gblinear&quot;,
+                           max_depth = i, 
+                           eta = 1, 
+                           nthread = 2, 
+                           nrounds = j, 
+                           lambda = 0.1,
+                           objective = &quot;count:poisson&quot;
+                           )
+      pred &lt;- predict(bstSparse, PRS_test[])
+      temp &lt;- append(temp,AUC(pred = pred, test$fam$affection))
+    }
+    poisson_AUCs[i,j] &lt;- mean(temp)
+  }
+}
+</code></pre>
+<pre><code>##            [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
+##  [1,] 0.7817714 0.7823509 0.7823041 0.7822926 0.7825028 0.7824836
+##  [2,] 0.7820513 0.7822373 0.7823633 0.7824287 0.7822630 0.7824896
+##  [3,] 0.7814487 0.7821501 0.7823655 0.7826146 0.7825234 0.7825795
+##  [4,] 0.7820921 0.7824120 0.7824182 0.7826145 0.7825073 0.7824446
+##  [5,] 0.7821936 0.7824070 0.7821748 0.7823153 0.7826239 0.7824142
+##  [6,] 0.7819266 0.7822376 0.7822175 0.7824563 0.7823541 0.7824829
+##  [7,] 0.7818918 0.7820830 0.7823140 0.7823306 0.7824132 0.7824501
+##  [8,] 0.7820375 0.7822164 0.7824588 0.7824749 0.7825382 0.7825095
+##  [9,] 0.7822184 0.7819440 0.7825596 0.7823647 0.7824570 0.7823492
+## [10,]        NA        NA        NA        NA        NA        NA
+##            [,7]      [,8]      [,9] [,10]
+##  [1,] 0.7823923 0.7821336 0.7818004    NA
+##  [2,] 0.7823814 0.7821682 0.7817430    NA
+##  [3,] 0.7823602 0.7821881 0.7817512    NA
+##  [4,] 0.7823655 0.7820304 0.7818152    NA
+##  [5,] 0.7822578 0.7821342 0.7818768    NA
+##  [6,] 0.7824436 0.7822035 0.7817998    NA
+##  [7,] 0.7824093 0.7822224 0.7817339    NA
+##  [8,] 0.7824048 0.7821033 0.7817913    NA
+##  [9,] 0.7823197 0.7822398 0.7817214    NA
+## [10,]        NA        NA        NA    NA
+</code></pre>
+<p><img alt="Poisson objective" src="../xgboost_fig/result_poisson-1.png" /></p>
+<p>I omitted the code for the next 2 experiments as they are largely similar, with exception of the option <em>objective</em> for <em>xgboost</em> function.</p>
+<p>For the next experimentation, I run 9 different <em>max_depth</em> and 9 <em>nrounds</em> with <em>reg:logistic</em> objective function. Each combination is repeated 10 times and the mean value calculated to rule out the randomess of <em>gblinear</em> booster</p>
+<p><img alt="Logistic objective" src="../xgboost_fig/result_log-1.png" /></p>
+<p>For the final experimentation, I run 9 different <em>max_depth</em> and 9 <em>nrounds</em> with <em>binary:logicraw</em> objective function. This function is interesting since it's specific for binary classification.</p>
+<p>Here is a composite boxplot comparing different objective functions. Index 1 is <em>count:poisson</em>, 2 is <em>reg:logistic</em> and 3 is <em>binary:logistic</em></p>
+<p><img alt="Comparision between Objective Functions" src="../xgboost_fig/comp-1.png" /></p>
+<p><img alt="Binary Logistic objective" src="../xgboost_fig/result_bilog-1.png" /></p>
+<h2 id="the-effect-of-boosters">The effect of Boosters</h2>
+<p>I replicate the experiment with the <em>gbtree</em> booster. Every other aspect stay the same. The effect of <em>max_depth</em> and <em>nrounds</em> is similar to <em>random forest</em>: more depth means more stability, while more rounds might lead to overfitting.</p>
+<pre><code class="language-r">tree_poisson_AUCs &lt;- matrix(,nrow = 10, ncol = 10)
+for (i in seq(2 : 10)){
+  for (j in seq(2: 10)) {
+    temp &lt;- c()
+    bstSparse &lt;- xgboost(data = ds[], 
+                         label = y.train, 
+                         booster=&quot;gbtree&quot;,
+                         max_depth = i, 
+                         eta = 1, 
+                         nthread = 2, 
+                         nrounds = j, 
+                         lambda = 0.1,
+                         objective = &quot;count:poisson&quot;
+                         )
+    pred &lt;- predict(bstSparse, PRS_test[])
+    tree_poisson_AUCs[i,j] &lt;- append(temp,AUC(pred = pred, test$fam$affection))
+  }
+}
+</code></pre>
+<pre><code>##            [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
+##  [1,] 0.5997502 0.6783138 0.6797928 0.7031598 0.7184346 0.7197522
+##  [2,] 0.6857363 0.6944414 0.7274155 0.7318843 0.7333248 0.7421854
+##  [3,] 0.7133489 0.7344719 0.7470404 0.7456065 0.7437271 0.7440640
+##  [4,] 0.7346792 0.7346642 0.7398461 0.7412047 0.7496907 0.7480144
+##  [5,] 0.7158010 0.7299822 0.7408819 0.7438784 0.7454125 0.7431477
+##  [6,] 0.7019057 0.7270527 0.7316911 0.7332872 0.7334402 0.7384122
+##  [7,] 0.7100347 0.7288694 0.7394506 0.7396847 0.7387767 0.7415382
+##  [8,] 0.7152308 0.7363614 0.7428634 0.7431836 0.7450280 0.7444436
+##  [9,] 0.7097638 0.7221877 0.7252510 0.7301520 0.7315682 0.7289940
+## [10,]        NA        NA        NA        NA        NA        NA
+##            [,7]      [,8]      [,9] [,10]
+##  [1,] 0.7196084 0.7276948 0.7265067    NA
+##  [2,] 0.7405149 0.7404706 0.7459368    NA
+##  [3,] 0.7417071 0.7426235 0.7399623    NA
+##  [4,] 0.7473723 0.7508377 0.7525843    NA
+##  [5,] 0.7372777 0.7398243 0.7404263    NA
+##  [6,] 0.7414204 0.7451333 0.7419437    NA
+##  [7,] 0.7438240 0.7396513 0.7403887    NA
+##  [8,] 0.7429152 0.7452253 0.7466324    NA
+##  [9,] 0.7257426 0.7244041 0.7217195    NA
+## [10,]        NA        NA        NA    NA
+</code></pre>
+<p><img alt="Poisson objective w/ Tree booster" src="../xgboost_fig/result_tree_poisson-1.png" /></p>
+<p>The following graph compare <em>gbtree</em> vs <em>gblinear</em>.</p>
+<p><img alt="Comparison between Tree and linear booster" src="../xgboost_fig/comp_tree_linear-1.png" /></p>
+<p>We can see clearly, the difference between different booster (non-linear/tree-based vs linear) booster. <em>gblinear</em> offer far more stable and better result compare to <em>gbtree</em> in this case.</p>
+<p>This result, however, might not reflex the whole situation. As demonstrated with <em>gblinear</em>, objective function play a major role in both performance and stability.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Original Rmd documment provided <a href="https://github.com/lamdv/Script/blob/master/xgboost_report/xgboost_c%2Bt.Rmd">here</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../CV/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Curriculum Vitae" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Curriculum Vitae
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Report/report/" class="md-footer__link md-footer__link--next" aria-label="Next: Viable method to combine C+T predictors for enhanced prediction power" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Viable method to combine C+T predictors for enhanced prediction power
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

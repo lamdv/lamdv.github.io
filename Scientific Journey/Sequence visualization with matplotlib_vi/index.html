@@ -1,0 +1,749 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lamdv.github.io/Scientific%20Journey/Sequence%20visualization%20with%20matplotlib_vi/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+    
+    
+      
+        <title>Hiển thị dữ liệu chuỗi - Liam</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hien-thi-du-lieu-chuoi-voi-matplotlib" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liam" class="md-header__button md-logo" aria-label="Liam" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liam
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hiển thị dữ liệu chuỗi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lamdv/lamdv.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liam" class="md-nav__button md-logo" aria-label="Liam" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Liam
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lamdv/lamdv.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CV/" class="md-nav__link">
+        Curriculum Vitae
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Scientific Journey
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scientific Journey" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Scientific Journey
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xgboost_c%2Bt/" class="md-nav__link">
+        XGBoost's objective function comparison
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Report/report/" class="md-nav__link">
+        Viable method to combine C+T predictors for enhanced prediction power
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine%20learning%20machine%20learning_en/" class="md-nav__link">
+        Model Selection: Machine learning Machine Learning - Part 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sequence%20visualization%20with%20matplotlib/" class="md-nav__link">
+        Visualizing Sequence data with Matplotlib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hiển thị dữ liệu chuỗi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Hiển thị dữ liệu chuỗi
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-dirty-way-1" class="md-nav__link">
+    The dirty way 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y-tuong" class="md-nav__link">
+    Ý tưởng
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yeu-cau" class="md-nav__link">
+    Yêu cầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oc-oc-oc" class="md-nav__link">
+    Đọc đọc đọc...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-en-oan-vui" class="md-nav__link">
+    OK đến đoạn vui
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposal/" class="md-nav__link">
+        Internships available at Algorithmic Bioinformatics team
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Thought
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Thought" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Thought
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Thought/the-death-of-expertise/" class="md-nav__link">
+        The Death of Expertise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Thought/on-writing/" class="md-nav__link">
+        Về chuyện viết lách
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-dirty-way-1" class="md-nav__link">
+    The dirty way 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y-tuong" class="md-nav__link">
+    Ý tưởng
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yeu-cau" class="md-nav__link">
+    Yêu cầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oc-oc-oc" class="md-nav__link">
+    Đọc đọc đọc...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-en-oan-vui" class="md-nav__link">
+    OK đến đoạn vui
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/lamdv/lamdv.github.io/edit/source/docs/Scientific Journey/Sequence visualization with matplotlib_vi.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="hien-thi-du-lieu-chuoi-voi-matplotlib">Hiển thị dữ liệu chuỗi với matplotlib</h1>
+<h5 id="the-dirty-way-1"><em>The dirty way</em> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h5>
+<p>Có lẽ đã có rất nhiều package Python cho phép hiển thị dữ liệu Multiple Sequence Alignment (MSA). Tuy vậy, thời gian của kỹ sư phần mềm và nhà nghiên cứu tin sinh học có lẽ nên dành để suy nghĩ về thuật toán và phát triển phần mềm riêng hơn là ngồi học thêm một vài package mới. Đôi khi khác thì các package chưa chắc đã hiển thị đúng metrics và định dạng mà ta mong muốn. Trong notebook này mình sẽ thử hiển thị một dataset MSA ngắn (75 residues) và một biểu đồ cột cho thấy tính bảo toàn của từng residue sử dụng matplotlib. Phép tính độ bảo toàn này không đúng lắm, nhưng điều đó không quá quan trọng. Cuối cùng chúng ta cũng hiển thị một chuỗi đồng thuận, chuỗi này là từng amino acid có tỉ lệ cao nhất ở mỗi residue - một lần nữa, điều này có thể không chính xác về mặt sinh học, nhưng các bạn có thể thay đổi để cho phù hợp hơn với dữ liệu và thống kê của riêng mình.</p>
+<h2 id="y-tuong">Ý tưởng</h2>
+<p>Ý tưởng đằng sau biểu đồ này là dựa vào biểu đồ thống kê chính, chúng ta lần lượt đặt từng residue vào vị trí của nó dưới các cột biểu đồ. Bởi vì matplotlib xác định vị trí các đối tượng trong biểu đồ của mình qua "data space" hay các mốc vị trí dựa trên dữ liệu, chúng ta có thể "hack" nó để gióng hàng các residue của mình. Đơn giản vầy thui.</p>
+<h2 id="yeu-cau">Yêu cầu</h2>
+<ol>
+<li>Thư viện</li>
+</ol>
+<p>Ta cần các thư viện sau: matplotlib (duh), BioPython và NumPy. BioPython dùng để quản lý, đọc và ghi các MSA, dù ta cũng có thể tự viết parser và đọc file FASTA trực tiếp - nhưng mà lười :D. NumPy dùng để tính toán và tương tác với matplotlib, ngoài ra thời này ai mà chẳng dùng numpy khi viết tutorial trên mạng cơ chứ...</p>
+<pre><code class="language-python">import numpy as np, Bio, matplotlib.pyplot as plot
+from matplotlib.ticker import FormatStrFormatter
+from Bio import SeqIO
+
+%matplotlib inline
+</code></pre>
+<ol>
+<li>Để vẽ một cách chính xác, trước hết ta cần định nghĩa vài thứ. Trước tiên, chúng ta cần một họ font monospace để đảm bảo các residue sẽ được thẳng hàng. Monospace font có khoảng cách bằng nhau bất kể ký tự - chữ A và chữ I đều tốn diện tích như nhau. Dễ hiểu tại sao chúng ta cần font này phải không.</li>
+</ol>
+<pre><code class="language-python">font = {'family': 'monospace',
+        'color':  'darkred',
+        'weight': 'normal',
+        'size': 16,
+        }
+</code></pre>
+<p>Tiếp theo chúng ta cần một cái bảng màu. Có 20 amino acid, và cần thêm 1 màu để hiển thị gap. Bảng màu mình sử dụng ở đây cũng là bảng màu được RasMol sử dụng (cái phần mềm này xưa như trái đất rồi holy f)</p>
+<pre><code class="language-python">palette = [
+    '#C8C8C8', '#145AFF', '#00DCDC', '#E60A0A', '#E6E600',
+    '#00DCDC', '#E60A0A', '#EBEBEB', '#8282D2', '#0F820F', 
+    '#0F820F', '#145AFF', '#E6E600', '#3232AA', '#DC9682', 
+    '#FA9600', '#FA9600', '#B45AB4', '#3232AA', '#0F820F', 
+    '#FFFFFF']
+</code></pre>
+<p>Cuối cùng ta có một string chứa tất cả các amino acid có thể nhận, và khoảng trống</p>
+<pre><code class="language-python">aa = 'ARNDCQEGHILKMFPSTWYV-'
+</code></pre>
+<h2 id="oc-oc-oc">Đọc đọc đọc...</h2>
+<p>Việc đầu tiên, đương nhiên là đọc cả chuỗi MSA và tính toán một số thông số cơ bản: Chiều dài chuỗi L và số chuỗi N.</p>
+<pre><code class="language-python">fasta_file = 'src/Inputs/example/1atzA.fas'
+msa = list(SeqIO.parse(fasta_file,'fasta'))
+L = len(msa[0].seq)
+N = len(msa)
+</code></pre>
+<p>Tính toán tần suất từng amino acid ở mỗi residue, và nhân tiện tính luôn chuỗi đồng thuận.</p>
+<pre><code class="language-python">freq = np.zeros([L,21])
+concensus = np.zeros(L)
+for i in range(0,N):
+    for j in range(0,L):
+        j_aa = aa.find(msa[i].seq[j])
+        freq[j,j_aa] = freq[j,j_aa] + 1
+for i in range(0, L):
+    concensus[i] = freq[i].argmax()
+</code></pre>
+<p>Chắc đoạn này dễ ha. </p>
+<p>Để tính toán độ bảo toàn, chúng ta dùng công thức như sau:</p>
+<p>
+<script type="math/tex; mode=display">
+C_i = \sqrt{\sum_{j}^{j=21}{(\frac{f_j}{N} - 0.05)^2}}
+</script>
+</p>
+<p>với <script type="math/tex">C_i</script> là độ bảo toàn của residue thứ <script type="math/tex">i</script>.</p>
+<p>Tại sao lại là 0.05? Bởi vì nó là <script type="math/tex">1/20</script>, và ở thì có 20 amino acid. Khoảng trống không tính...
+<em>(tất nhiên là có 21 giá trị có thể nhận được nhưng mà cái note này đủ bậy rồi lmao)</em></p>
+<pre><code class="language-python">conservation = np.sqrt(np.sum((np.square(freq/N - 0.05)),axis=1))
+</code></pre>
+<h2 id="ok-en-oan-vui">OK đến đoạn vui</h2>
+<p>Bởi vì không có cách nào có sẵn để vẽ cả mớ chuỗi này vào đồ thị, chỗ code dưới này nhìn sẽ khá rối rắm. Đồng thời nó cũng chưa chắc là cách ngon nhất để làm (chắc không phải đâu)... nhưng nó là một cách</p>
+<!-- *Notes: I put *````figure````* in places where I want to draw the figure **for demonstration purpose**. You may want to remove them when you recombine the code boxes in your notebook, otherwise it will draw multiple graph. On itself.* -->
+
+<p>Trước tiên, tất nhiên ta tạo một đồ thị và các trục tương ứng. Cái đồ thị này được thiết lập khá rộng, vì cái chuỗi nhét vào nó dàii <em>wink wink</em>.</p>
+<pre><code class="language-python">figure = plot.figure(figsize=(20,2))
+axes = plot.axes([0,0,1,1]);
+plot.close()
+</code></pre>
+<p>OK giờ đến lúc vẽ cái đồ thị về độ bảo toàn. nó đơn giản chỉ là một cái bar graph cho thấy độ bảo toàn ở từng residue.</p>
+<p>Reminder: để gọi bargraph: <code>axes.bar(range,data,**args)</code>. Trong trường hợp này chúng ta cần các parameters <code>align='edge', linewidth=0</code> để gióng hàng các amino acid. <code>align='edge'</code> làm cho các cột gióng hàng ở cạnh trái, và <code>linewidth=0</code> làm cho khoảng cách các cột khít hơn.</p>
+<pre><code class="language-python">axes.bar(range(0,L),conservation, align='edge', linewidth = 0, color = 'red')
+axes.set_ylabel('Conservation')
+</code></pre>
+<p><img alt="svg" src="../Sequence%20visualization%20with%20matplotlib_files/Sequence%20visualization%20with%20matplotlib_21_0.svg" /></p>
+<p>Giờ đến lúc vẽ các chuỗi. Chúng ta lấy ra 5 chuỗi ngẫu nhiên từ MSA, đơn giản vì với 1000 chuỗi thì data của mình quá rộng để có thể vẽ tất cả. Đồng thời chúng ta tính toán khoảng cách giữa các chuỗi, cũng như khoảng cách từ đáy đồ thị đến chuỗi đầu tiên.</p>
+<p>Khoảng cách giữa các chuỗi được tính bằng cận của trục y chia 6. Tại sao? Vì chia 6 nó khớp hàng 😅, không có giải thích nào hay hơn cả ...</p>
+<pre><code class="language-python">spacing_scale = axes.get_ylim()[1]/6
+spacing = spacing_scale*2
+
+seq_display = np.sort(np.random.randint(0,N,[5]))
+</code></pre>
+<p>Ok, giờ thì làm sao mà vẽ?</p>
+<p>Với mỗi chuỗi, trước tiên ta tính toán khoảng cách đến gốc tọa độ <script type="math/tex">(0, 0)</script>. Vị trí trục x của từng residue được tính toán đơn giản là vị trí của chính nó trong chuỗi. Khá gọn. Tiêu đề của từng chuỗi được vẽ dịch về bên trái bằng cách lấy giá trị x âm, và trong trường hợp này ta lấy là -5.</p>
+<p><code>axes.text()</code> được gọi để vẽ từng residue. Với mỗi residue chúng ta có một cái bbox vẽ đè lên. Các bbox này có <code>alpha=0.5</code> để nó  trong suốt, và màu như trong palette màu đã định nghĩa ở trên.</p>
+<p>À mà nhớ dùng <code>fontdict=font</code> để xài cái font family nãy nhé.</p>
+<pre><code class="language-python">for j in seq_display:
+    posit = -float(np.where(seq_display == j)[0]) * spacing_scale - spacing
+    axes.text(-5,posit, &quot;Seq &quot;+(str(j+1)))
+    for i in range(0, L):
+        axes.text(float(i),posit, msa[j].seq[i],
+            bbox=dict(facecolor=palette[aa.find(msa[j].seq[i])], 
+            alpha=0.5),fontdict=font)
+</code></pre>
+<p><img alt="svg" src="../Sequence%20visualization%20with%20matplotlib_files/Sequence%20visualization%20with%20matplotlib_25_0.svg" /></p>
+<p>Cuối cùng, chúng ta thêm chuỗi đồng thuận:</p>
+<pre><code class="language-python">posit = posit - spacing
+axes.text(-5,posit, &quot;Concensus&quot;)
+for i in range(0, L):
+    axes.text(float(i),posit, 'ARNDCQEGHILKMFPSTWYV-'[int(concensus[i])] ,
+                bbox=dict(facecolor=palette[int(concensus[i])], 
+                alpha=0.5),fontdict=font)
+</code></pre>
+<p><img alt="svg" src="../Sequence%20visualization%20with%20matplotlib_files/Sequence%20visualization%20with%20matplotlib_27_0.svg" /></p>
+<p>Et voila! Đây là một cách nhanh (và bẩn) để hiển thị dataset. Mình hi vọng nó đủ đơn giản để các bạn có thể tự biển đổi nó cho từng loại dữ liệu riêng (Genomics, transcriptomics...), và cũng như dùng các loại đồ thị khác làm nền tảng. Tuy nhiên, phương pháp này có lẽ không phải là cách tốt nhất để hiển thị các chuỗi dài hơn - bạn phải tự tìm đường phù hợp nhất với dữ liệu của mình. Nhưng đó là điều hay ho khi làm Bioinfomatics!!! Và giờ thì bạn có toàn quyền kiểm soát trên quá trình rồi.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Notebook Jupyter gốc (tiếng Anh) thì ở <a href="https://github.com/lamdv/lamdv.github.io/blob/source/docs/Sequence%20visualization%20with%20matplotlib.ipynb">đây</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Sequence%20visualization%20with%20matplotlib/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Visualizing Sequence data with Matplotlib" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Visualizing Sequence data with Matplotlib
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../proposal/" class="md-footer__link md-footer__link--next" aria-label="Next: Internships available at Algorithmic Bioinformatics team" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Internships available at Algorithmic Bioinformatics team
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
