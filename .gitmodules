@@ -1,0 +1,3 @@
+[submodule "wedding"]
+	path = wedding
+	url = git@github.com:lamdv/wedding-site.git
