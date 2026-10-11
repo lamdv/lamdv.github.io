@@ -1,934 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặng Vũ Lâm — Director of AI &amp; Transformation (SAVA)</title>
+<style>
+  :root {
+    --accent: #1a4f7a;
+    --accent-soft: #e8f0f7;
+    --text: #1f2328;
+    --muted: #5a6470;
+    --rule: #d0d7de;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; padding: 0; background: #f2f4f7; color: var(--text);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt; line-height: 1.42;
+  }
+  @media (max-width: 760px){ .page { width: 100%; min-height: 0; margin: 0; } }
+  .page {
+    width: 210mm; min-height: 297mm; margin: 10mm auto; padding: 14mm 15mm;
+    background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+  }
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-        <link rel="canonical" href="https://lamdv.github.io/CV/">
-      
-      
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../Scientific%20Journey/xgboost_c%2Bt/">
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
-    
-    
-      
-        <title>Curriculum Vitae - Liam</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
-      
-      
+  /* Header */
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-bottom: 12px; }
+  h1 { margin: 0 0 3px; font-size: 19pt; letter-spacing: 0.4px; color: var(--accent); text-transform: uppercase; }
+  .tagline { font-size: 10pt; color: var(--text); font-weight: 600; margin-bottom: 3px; }
+  .contact { font-size: 9pt; color: var(--muted); }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact span.sep { margin: 0 6px; color: var(--rule); }
 
-    
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+  /* Sections */
+  section { margin-bottom: 11px; }
+  h2 {
+    font-size: 11pt; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent);
+    margin: 0 0 6px; padding-bottom: 3px; border-bottom: 1px solid var(--rule); page-break-after: avoid;
+  }
+  h3 { font-size: 10.5pt; margin: 9px 0 1px; page-break-after: avoid; }
+  h3 .org { color: var(--accent); }
+  h4 { font-size: 10pt; margin: 7px 0 2px; page-break-after: avoid; }
+  h4 .tag { color: var(--accent); }
+  .meta { font-size: 9pt; color: var(--muted); font-style: italic; margin: 0 0 3px; }
+  p { margin: 3px 0; }
+  ul { margin: 3px 0 4px; padding-left: 16px; }
+  li { margin: 1.5px 0; }
+  .summary { text-align: justify; margin: 0; }
 
-    
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
-  
-    
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#dang-vu-lam" class="md-skip">
-          Skip to content
-        </a>
-      
+  /* Focus list */
+  .focus { margin: 0; padding-left: 16px; }
+  .focus li { margin: 2px 0; }
+  .focus b { color: var(--accent); }
+
+  /* Competencies table */
+  table { width: 100%; border-collapse: collapse; }
+  table.cmp th, table.cmp td {
+    text-align: left; vertical-align: top; padding: 4px 8px 4px 0; border-bottom: 1px solid var(--rule);
+  }
+  table.cmp th {
+    width: 120px; color: var(--accent); font-size: 9pt; text-transform: uppercase;
+    letter-spacing: 0.4px; white-space: nowrap;
+  }
+  table.cmp tr:last-child th, table.cmp tr:last-child td { border-bottom: none; }
+
+  .entry, .project, .pub { page-break-inside: avoid; }
+  blockquote {
+    margin: 6px 0; padding: 4px 10px; border-left: 3px solid var(--accent);
+    background: var(--accent-soft); font-size: 9pt; color: var(--muted);
+  }
+
+  /* Print */
+  @page { size: A4; margin: 12mm 14mm; }
+  @media print {
+    body { background: #fff; font-size: 10pt; }
+    .page { width: auto; min-height: auto; margin: 0; padding: 0; box-shadow: none; }
+    a { color: var(--text); text-decoration: none; }
+    .no-print { display: none !important; }
+  }
+
+  .print-btn {
+    position: fixed; top: 14px; right: 14px; padding: 8px 16px; border: none; border-radius: 6px;
+    background: var(--accent); color: #fff; font-size: 12px; cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .print-btn:hover { background: #123a5a; }
+
+  .home-link {
+    position: fixed; top: 14px; left: 14px; padding: 8px 14px; border-radius: 6px;
+    background: #fff; color: var(--accent); text-decoration: none; font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .home-link:hover { background: var(--accent-soft); }
+</style>
+</head>
+<body>
+
+<a class="home-link no-print" href="../">&larr; lamdv.github.io</a>
+<button class="print-btn no-print" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="page">
+
+  <header>
+    <h1>Đặng Vũ Lâm</h1>
+    <div class="tagline">AI Systems Architect · Agentic Systems &amp; Applied Frontier Research</div>
+    <div class="contact">
+      <a href="mailto:lam.dv@live.com">lam.dv@live.com</a>
+      <span class="sep">|</span>
+      <a href="https://lamdv.github.com">lamdv.github.com</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/lamdv">github.com/lamdv</a>
+      <span class="sep">|</span>
+      Hanoi, Vietnam
     </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
+  </header>
 
-  
+  <section>
+    <h2>Profile</h2>
+    <p class="summary">
+      AI systems architect with <strong>8 years</strong> building production AI and data platforms,
+      now working at the frontier of <strong>agentic systems</strong>. I have architected a
+      <strong>git-native collaboration platform for human-agent teams</strong> (Context Highway), led
+      engineering teams of up to 12, and still design and write code daily. I look past trends to the
+      non-obvious bets — picking niches where recent advances become applicable — and hold a technical
+      thesis under pressure. Comfortable across research and delivery, from genotype
+      dimensionality reduction to enterprise data platforms, with governance
+      (least-privilege, on-behalf-of-user, GDPR/HIPAA) built into everything I ship.
+    </p>
+  </section>
 
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Liam" class="md-header__button md-logo" aria-label="Liam" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Liam
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Curriculum Vitae
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/lamdv/lamdv.github.io" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Liam" class="md-nav__button md-logo" aria-label="Liam" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    Liam
-  </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/lamdv/lamdv.github.io" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Curriculum Vitae
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Curriculum Vitae
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#research-interest" class="md-nav__link">
-    RESEARCH INTEREST
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#education" class="md-nav__link">
-    EDUCATION
-  </a>
-  
-    <nav class="md-nav" aria-label="EDUCATION">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#universtiy-grenoble-alpes" class="md-nav__link">
-    Universtiy Grenoble Alpes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#universtiy-of-science-and-technology-of-hanoi" class="md-nav__link">
-    Universtiy of Science and Technology of Hanoi
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-expriences" class="md-nav__link">
-    WORKING EXPRIENCES
-  </a>
-  
-    <nav class="md-nav" aria-label="WORKING EXPRIENCES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#center-for-bioinformatics-saarland-university" class="md-nav__link">
-    Center for Bioinformatics, Saarland University
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#master-research-project-timc-laboratory" class="md-nav__link">
-    Master Research Project, TIMC Laboratory
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#master-research-project-timc-laboratory_1" class="md-nav__link">
-    Master Research Project, TIMC Laboratory
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rrice-project-ird" class="md-nav__link">
-    rRice project, IRD
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ictlab-university-of-science-and-technology-of-hanoi" class="md-nav__link">
-    ICTLab, University of Science and Technology of Hanoi
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fablab-usth" class="md-nav__link">
-    FabLab USTH
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fablab-vietnam-foundation" class="md-nav__link">
-    FabLab Vietnam Foundation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dream-project-incubator" class="md-nav__link">
-    Dream Project Incubator
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#honoractivities" class="md-nav__link">
-    HONOR/ACTIVITIES
-  </a>
-  
-    <nav class="md-nav" aria-label="HONOR/ACTIVITIES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dream-project-incubator_1" class="md-nav__link">
-    Dream Project Incubator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3rd-prize-national-gifted-students-competition-in-informatics" class="md-nav__link">
-    3rd prize National gifted students’ competition in Informatics
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skills" class="md-nav__link">
-    SKILLS
-  </a>
-  
-</li>
-      
+  <section>
+    <h2>Focus Areas</h2>
+    <ul class="focus">
+      <li><b>Agentic systems</b> — human-agent teaming, agent-driven SDLC, agents operating directly on data platforms.</li>
+      <li><b>Dynamic UI &amp; dynamic workflow</b> — interfaces and workflows that reconfigure themselves in the agent era.</li>
+      <li><b>Ubiquitous computing with agents</b> — agents embedded across environments and devices.</li>
+      <li><b>Frontier applied research</b> — turning recent results into working systems, not demos.</li>
     </ul>
-  
-</nav>
-      
-    </li>
-  
+  </section>
 
-    
-      
-      
-      
+  <section>
+    <h2>Core Competencies</h2>
+    <table class="cmp">
+      <tr><th>Agentic Systems</th><td>Cross-HAT collaboration; Context Highway platform (L0/L1/L2/L3 authority layers); agent-driven SDLC; agent governance (least-privilege, OBO)</td></tr>
+      <tr><th>AI &amp; Data Platforms</th><td>End-to-end pipeline architecture; Azure Databricks; OpenSearch; Postgres / SQL Server; large-scale ingestion &amp; transformation; sub-second query design</td></tr>
+      <tr><th>Engineering</th><td>Python (FastAPI, Dash, scipy, numba, PyTorch, ONNX); C/C++; R; JavaScript; git-native tooling; high-performance computing</td></tr>
+      <tr><th>Research &amp; Theory</th><td>Algorithm engineering; complexity; ML; linear algebra, graph theory, numerical &amp; combinatorial optimisation</td></tr>
+      <tr><th>Governance &amp; Risk</th><td>Responsible AI; GDPR / HIPAA; model &amp; data governance; privacy, compliance, audit</td></tr>
+      <tr><th>Languages</th><td>Vietnamese (native); English (fluent)</td></tr>
+    </table>
+  </section>
 
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          Scientific Journey
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Scientific Journey
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Scientific%20Journey/xgboost_c%2Bt/" class="md-nav__link">
-        XGBoost's objective function comparison
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Scientific%20Journey/Report/report/" class="md-nav__link">
-        Viable method to combine C+T predictors for enhanced prediction power
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Scientific%20Journey/machine%20learning%20machine%20learning_en/" class="md-nav__link">
-        Model Selection: Machine learning Machine Learning - Part 1
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Scientific%20Journey/Sequence%20visualization%20with%20matplotlib/" class="md-nav__link">
-        Visualizing Sequence data with Matplotlib
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Scientific%20Journey/Sequence%20visualization%20with%20matplotlib_vi/" class="md-nav__link">
-        Hiển thị dữ liệu chuỗi
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Scientific%20Journey/proposal/" class="md-nav__link">
-        Internships available at Algorithmic Bioinformatics team
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Thought
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Thought
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Thought/the-death-of-expertise/" class="md-nav__link">
-        The Death of Expertise
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Thought/on-writing/" class="md-nav__link">
-        Về chuyện viết lách
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#research-interest" class="md-nav__link">
-    RESEARCH INTEREST
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#education" class="md-nav__link">
-    EDUCATION
-  </a>
-  
-    <nav class="md-nav" aria-label="EDUCATION">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#universtiy-grenoble-alpes" class="md-nav__link">
-    Universtiy Grenoble Alpes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#universtiy-of-science-and-technology-of-hanoi" class="md-nav__link">
-    Universtiy of Science and Technology of Hanoi
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-expriences" class="md-nav__link">
-    WORKING EXPRIENCES
-  </a>
-  
-    <nav class="md-nav" aria-label="WORKING EXPRIENCES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#center-for-bioinformatics-saarland-university" class="md-nav__link">
-    Center for Bioinformatics, Saarland University
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#master-research-project-timc-laboratory" class="md-nav__link">
-    Master Research Project, TIMC Laboratory
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#master-research-project-timc-laboratory_1" class="md-nav__link">
-    Master Research Project, TIMC Laboratory
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rrice-project-ird" class="md-nav__link">
-    rRice project, IRD
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ictlab-university-of-science-and-technology-of-hanoi" class="md-nav__link">
-    ICTLab, University of Science and Technology of Hanoi
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fablab-usth" class="md-nav__link">
-    FabLab USTH
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fablab-vietnam-foundation" class="md-nav__link">
-    FabLab Vietnam Foundation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dream-project-incubator" class="md-nav__link">
-    Dream Project Incubator
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#honoractivities" class="md-nav__link">
-    HONOR/ACTIVITIES
-  </a>
-  
-    <nav class="md-nav" aria-label="HONOR/ACTIVITIES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dream-project-incubator_1" class="md-nav__link">
-    Dream Project Incubator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3rd-prize-national-gifted-students-competition-in-informatics" class="md-nav__link">
-    3rd prize National gifted students’ competition in Informatics
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skills" class="md-nav__link">
-    SKILLS
-  </a>
-  
-</li>
-      
+  <section>
+    <h2>Selected Impact</h2>
+    <ul>
+      <li>Designed the <strong>Agentic SDLC</strong> method behind <strong>GreenCSR (Viettel)</strong> — a git-native platform where Human-Agent Teams share a versioned <code>.wiki/</code> across four authority layers; adopted by <strong>3–4 teams</strong>.</li>
+      <li>Delivered <strong>GreenCSR</strong> at <strong>36 man-months vs. 300 estimated</strong> (≈8× leverage), <strong>9 → 3 months</strong>, for <strong>$3,000</strong> in token cost.</li>
+      <li>Reversed a <strong>McKinsey rule-based system</strong> to an ML prediction engine — <strong>30% fewer rejected suggestions</strong>, no user retraining, better rationale.</li>
+      <li>Delivered <strong>3 production AI applications</strong> + a semantic search platform on Azure Databricks; sub-second queries over <strong>millions of records</strong>.</li>
     </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
+  </section>
 
-  
-  
+  <section>
+    <h2>Experience</h2>
 
+    <div class="entry">
+      <h3>AI Scientist / Data Engineer — <span class="org">FPT Software</span></h3>
+      <p class="meta">October 2024 – Present</p>
+      <p>
+        Design and deliver AI-powered systems and data platforms for enterprise clients; own
+        end-to-end architecture and lead engineering teams. Work ~50/50 across direction-setting and
+        hands-on contribution.
+      </p>
 
-<h1 id="dang-vu-lam"><a href="#1">DANG Vu Lam</a></h1>
-<p><strong>Researcher (PhD candidate) <br></strong>
-<strong><em>Center for Bioinformatics, Saarland University</em></strong></p>
-<p><strong><em>Email</em></strong>: <a href=""><em>TBD</em></a><br>
-<strong><em>Personal Contact</em></strong>: <a href="mailto:lam.dv@live.com"><em>lam.dv@live.com</em></a><br>
-<strong><em>Phone number</em></strong>: (+33) 6 68 36 02 29 </p>
-<p><a href="https://github.com/lamdv"><em>Github</em></a> | <a href="https://www.linkedin.com/in/dang-vu-lam-308497b0/"><em>Linkedin</em></a> | <a href="https://lamdv.github.io/"><em>Webpage</em></a></p>
-<p>&nbsp;</p>
-<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
+      <div class="project">
+        <h4>GreenCSR (Viettel)</h4>
+        <p>
+          <strong>The product.</strong> A corporate social responsibility (CSR) platform for
+          <strong>Viettel</strong>, a large Vietnamese payment provider. Delivered in <strong>3 months</strong>
+          against an original estimate of <strong>300 man-months over 9 months</strong>, at
+          <strong>36 man-months</strong> delivered and <strong>$3,000</strong> in token cost. Led 9 engineers.
+        </p>
+        <p>
+          <strong>The methodology — Agentic SDLC.</strong> The velocity came from a
+          <strong>Cross-HAT (Human-Agent Team)</strong> collaboration scheme I designed and led, later
+          distilled into a full platform blueprint. Before: "vibe requirements, vibe architecture,"
+          scattered documentation, each developer working sporadically with fragmented tooling
+          (BMAD, Superpower, …). The scheme standardises the <em>invariants</em> (architecture, work
+          division, API contracts) while leaving each developer's agent workflow free.
+        </p>
+        <ul>
+          <li><strong>Git-native — introduced no new tool.</strong> A versioned <code>.wiki/</code> carries shared context across four authority layers (L0 canon / L1 forum / L2 godview / L3 private workbench); facts climb only by explicit promotion.</li>
+          <li>Each developer owns their own agents — a <strong>HAT = one developer + their agents</strong> — with only quality and integration quality gated centrally.</li>
+          <li><strong>New developers contribute on day 1</strong> with agents assisting comprehension; <strong>3 developers worked the same project with no friction</strong>.</li>
+          <li>Held the thesis against pressure from above to wrap it in a heavyweight tool; transferred to <strong>3–4 additional teams</strong> with good results.</li>
+          <li>Delivered a <strong>2-week Agentic SDLC course for SBI-FPT</strong> and coach 4–5 engineers informally on an ongoing basis through the method.</li>
+        </ul>
+      </div>
 
-<h2 id="research-interest">RESEARCH INTEREST</h2>
-<p><em>My current research interest including, but not limited to:</em></p>
-<ol>
-<li>Bioinformatics: Genomics, Proteomics. Meta-omics are currently in reading list</li>
-<li>Mathematics: Linear Algebra, Algorithm and Complexity, Graph Theory.</li>
-<li>Neural Network: Deep Learning and Deep Neural Net, Extreme Learning Machine.</li>
-<li>Optimization algorithms: Swarm Intelligent, Swarm Optimization and Metaheuristic.</li>
-<li>Data Science: Advance Data Structure, Indexing, Knowledge Representation.</li>
-</ol>
-<p>&nbsp;</p>
-<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
+      <div class="project">
+        <h4>CIM — data-driven customer growth <span class="meta" style="font-style:normal">(world-leading chemical manufacturer)</span></h4>
+        <p>
+          Led migration from a legacy (McKinsey-designed) rule-based system to an ML-driven prediction
+          engine. Architected the full pipeline: multi-source ingestion, data-quality validation,
+          feature engineering, real-time serving; relational schema for millions of records with
+          <strong>sub-second</strong> queries. Achieved <strong>30% fewer rejected suggestions</strong>
+          with <strong>no interface retraining</strong> and <strong>better rationale</strong>. Led 5 Data
+          &amp; AI Scientists.
+        </p>
+      </div>
 
-<h2 id="education">EDUCATION</h2>
-<h3 id="universtiy-grenoble-alpes">Universtiy Grenoble Alpes</h3>
-<p>2018 - 2021<br>
-<em>Master of Science in Informatics</em><br>
-UFR IMAG and ENSIMAG<br>&nbsp;<br></p>
-<hr>
+      <div class="project">
+        <h4>Manufacturing Initiative — semiconductor industry <span class="meta" style="font-style:normal">(Azure Databricks)</span></h4>
+        <p>
+          Designed and delivered scalable pipelines for AI/ML over real manufacturing telemetry:
+          high-volume sensor ingestion with timestamp normalisation, sensor-drift handling, missing-data
+          imputation, late-arriving events; plus a keyword×document matching architecture at sub-second
+          latency. Delivered <strong>3 production AI applications</strong> and a semantic search platform
+          with full data-quality monitoring and alerting. Led 12 engineers.
+        </p>
+      </div>
 
-<h3 id="universtiy-of-science-and-technology-of-hanoi">Universtiy of Science and Technology of Hanoi</h3>
-<p>Oct. 2013 - Oct 2017<br>
-<em>Bachelor of Science and Technology</em><br>
-Falcuty of Information and Communication Technology<br>&nbsp;<br>
-<em><strong>Thesis topic</strong>: Extreme Learning Machine</em></p>
-<p>&nbsp;</p>
-<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
+      <div class="project">
+        <h4>Unified Search — embedding-model selection</h4>
+        <p>
+          Redesigned end-to-end data architecture for systematic, data-driven embedding-model
+          evaluation: refactored ingestion, normalized schemas enabling new models without schema
+          changes, and a judgment-collection pipeline over thousands of real queries. Production-grade
+          with edge-case test coverage and schema/recovery documentation.
+        </p>
+      </div>
 
-<h2 id="working-expriences">WORKING EXPRIENCES</h2>
-<h3 id="center-for-bioinformatics-saarland-university">Center for Bioinformatics, Saarland University</h3>
-<p><em>Dec 2021 - Current</em></p>
-<p><strong>Position</strong> Researcher, PhD Candidate</p>
-<h3 id="master-research-project-timc-laboratory">Master Research Project, TIMC Laboratory</h3>
-<p><em>Mar 2021 - Sep 2021</em></p>
-<h3 id="master-research-project-timc-laboratory_1">Master Research Project, TIMC Laboratory</h3>
-<p><em>Mar 2019 – Sep 2019</em></p>
-<p><strong>Position</strong>: Programmer, Researcher.</p>
-<h3 id="rrice-project-ird">rRice project, IRD</h3>
-<p><em>Oct 2017 – Aug 2018</em></p>
-<p>Under the supervision of Dr. Pierre Larmande and Dr. Ho Bich Hai, I helped develop an R package and accompanying Python library to mine genomics data across multiple databases.</p>
-<p><strong>Position</strong>: Programmer, Researcher.</p>
-<p>&nbsp;</p>
-<hr>
+      <div class="project">
+        <h4>Additional</h4>
+        <p>
+          <em>Voice of Employee</em> — internal LLM sentiment/topic pipeline + leadership dashboards.
+          <em>Migration Pathfinder</em> — secure on-prem AI fact-finding tool for cloud-migration assessments.
+        </p>
+      </div>
+    </div>
 
-<h3 id="ictlab-university-of-science-and-technology-of-hanoi">ICTLab, University of Science and Technology of Hanoi</h3>
-<p><em>Apr 2017 – Oct 2017</em></p>
-<p>As part of the collaboration between CVUT (Prague, Czech Republic) and USTH (Hanoi, Vietnam), I have done an internship under the supervision of Professor Basterrech (CVUT) that resulted in my bachelor thesis. We developed metaheuristic and swarm optimization algorithms for improving Extreme Learning Neural Networks.</p>
-<p><strong>Position</strong>: Intern Researcher.</p>
-<p>&nbsp;</p>
-<hr>
+    <div class="entry">
+      <h3>Algorithm Engineer — <span class="org">BioTuring, Inc.</span></h3>
+      <p class="meta">January 2024 – September 2024</p>
+      <p>
+        Developed core single-cell analysis methods — pseudo-time trajectory inference and bulk RNA-seq
+        deconvolution (<strong>PyDWLS</strong>, under review) — and a microscopy cell-segmentation app
+        (classical CV + semantic segmentation, backend architecture, performance optimisation).
+      </p>
+    </div>
 
-<h3 id="fablab-usth">FabLab USTH</h3>
-<p><em>May 2015 – Aug 2018</em></p>
-<p>FabLab are global network of Digital Fabrication Laboratory and workshops with the purpose of enabling invention, innovation and hacking of physical world by providing access to digital fabrication tools. In 2015, I organized the FabLab at USTH as a student club with the aim to advocate and support said goals and inciting hacking mentality for students at USTH</p>
-<p><strong>Position</strong>: Founding Member, Mentor.</p>
-<p>&nbsp;</p>
-<hr>
+    <div class="entry">
+      <h3>Research Associate / PhD Candidate — <span class="org">Centre for Bioinformatics, Saarland University</span></h3>
+      <p class="meta">December 2021 – October 2023</p>
+      <p>Enhanced dimensionality-reduction methods for genotype data to surface latent biological factors.</p>
+      <ul>
+        <li>Applied and improved <strong>NMF</strong> algorithms for genotype data.</li>
+        <li>Developed a novel <strong>Polygenic Risk Score</strong> method from NMF components — <strong>ROC-AUC &gt; 0.7</strong> on real datasets.</li>
+        <li>Taught undergraduate and master courses; supervised 2 student group projects (Boolean matrix factorisation for genotypes; low-dimensional embedding of tumour methylation data).</li>
+        <li>Supervisor: <strong>Prof. Dr. Sven Rahmann.</strong></li>
+      </ul>
+    </div>
 
-<h3 id="fablab-vietnam-foundation">FabLab Vietnam Foundation</h3>
-<p><em>May 2015 – 2016</em></p>
-<p>FabLab Vietnam Foundation is a consortium of all FabLabs operates in Vietnam. At the time consists of 5 Labs, our purpose is to promote the development of FabLabs style facilities and Maker Movement in Vietnam. In 2015, the Foundation received a grant of $100,000 from IPP to further expand the movement.</p>
-<p><strong>Position</strong>: Member, Representation of FabLab USTH.</p>
-<p>&nbsp;</p>
-<hr>
+    <div class="entry">
+      <h3>Research Assistant — <span class="org">TiMC Laboratory, Université Grenoble Alpes</span></h3>
+      <p class="meta">March 2019 – October 2021</p>
+      <p>
+        Structural and functional analysis of protein families: implemented algorithms to detect
+        sectors in sequence alignments; simulated statistical and topological structure to assess
+        sector significance and stability. With Dr. Varoquaux. Surfaced new structural/functional
+        patterns in protein evolution.
+      </p>
+    </div>
 
-<h3 id="dream-project-incubator">Dream Project Incubator</h3>
-<p><em>September 2015 – 2016</em></p>
-<p>Dream Project Incubator aims to transform ambitious, self-driven young Vietnamese into better thinkers and doers via intellectual engagement and mentorship. Every year the project award 4 scholarship for ambitious Vietnamese whose age are between 19 and 25 for a 3 months summer trip to MIT, USA. After the conclusion of my USA trip, I served in the board of alumini, and as jury member and organizer for 2016 program</p>
-<p><strong>Position</strong>: Alumni, Organizer, Jury.</p>
-<p>&nbsp;</p>
-<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
+    <div class="entry">
+      <h3>Scientific Programmer — <span class="org">ICTLab, USTH &amp; IRD</span></h3>
+      <p class="meta">October 2017 – June 2018</p>
+      <p>
+        Co-developed <strong>rRice</strong> (R) and <strong>pyRice</strong> (Python) to automate
+        genomic-data crawling and aggregation for <em>Oryza sativa</em> subsp. <em>Japonica</em> research.
+      </p>
+    </div>
 
-<h2 id="honoractivities">HONOR/ACTIVITIES</h2>
-<h3 id="dream-project-incubator_1">Dream Project Incubator</h3>
-<p><em>Jun 2015</em></p>
-<p>Dream Project Incubator is a program setup by MIT PhDs and PhD candidates in collaboration with Boston Global Forum. I was awarded a 3 months stay in Boston for my work with FabLab USTH and FabLab Vietnam Foundation, and the chances to meet and confer with top minds from MIT and Harvard University.</p>
-<p>&nbsp;</p>
-<hr>
+    <div class="entry">
+      <h3>Junior Researcher — <span class="org">ICTLab, USTH</span></h3>
+      <p class="meta">April 2017 – October 2017</p>
+      <p>
+        Improved Extreme Learning Machine training via metaheuristic / swarm optimisation (PSO) for
+        first-layer weights; validated on benchmark datasets.
+      </p>
+    </div>
+  </section>
 
-<h3 id="3rd-prize-national-gifted-students-competition-in-informatics">3rd prize National gifted students’ competition in Informatics</h3>
-<p><em>2007, 2008 and 2009</em></p>
-<p>Held by Vietnam Ministry of Information Technology (now Ministry of Information and Communication)</p>
-<p>&nbsp;</p>
-<hr style="height:1px;border:none;color:#333;background-color:#333;"/>
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <h3>Doctor of Science (Bioinformatics) — <span class="org">Saarland University, Center for Bioinformatics</span></h3>
+      <p class="meta">December 2021 – October 2023 · <strong>(ABD)</strong></p>
+    </div>
+    <div class="entry">
+      <h3>MSc Informatics — Data Science — <span class="org">ENSIMAG / Université Grenoble Alpes</span></h3>
+      <p class="meta">2018 – 2021</p>
+    </div>
+    <div class="entry">
+      <h3>BSc Science &amp; Technology — ICT — <span class="org">University of Sciences and Technology of Hanoi</span></h3>
+      <p class="meta">2013 – 2017</p>
+    </div>
+  </section>
 
-<h2 id="skills">SKILLS</h2>
-<ul>
-<li><strong>Mathematics</strong><br>
-  Linear Algebra; Graph Theory; Numerical and Combinatorial Optimization; Algorithms Design and Computational Complexity Theory.</li>
-<li><strong>Sofware Engineering</strong><br>
-  Python 3.0; C, C++, C#; Java; NodeJS; R, Matlab, Tensorflow; Ruby on Rails; Arduino and Processing.</li>
-<li><strong>Hardware, Engineering, Design and Fabrication</strong><br>
-  CAD Design (CATIA, Solidwork, Fusion 360); Metal Working; CNC machining; 3D printing; Electronics.</li>
-<li><strong>Language</strong><br><ul>
-<li>English<br>
-  &emsp;IELTS Academic 7.5 (as of 2018)<br>
-  &emsp;Completed my Bachelor program in English<br></li>
-<li>Vietnamese<br>
-  &emsp;First language</li>
-<li>French<br>
-  &emsp;Beginner</li>
-</ul>
-</li>
-</ul>
-<p>&nbsp;</p>
-<p><a name="1">^</a><em>In Vietnamese, the last name is DANG</em></p>
+  <section>
+    <h2>Talks, Teaching &amp; Publications</h2>
+    <div class="pub">
+      <div><strong>PyDWLS</strong>: Dampened Weighted Least Squares for ultra-fast cell-type proportion estimation from bulk RNA-seq — <em>under review</em>, BioTuring, 2024</div>
+    </div>
+    <div class="pub">
+      <div><strong>NMF for Polygenic Risk Score</strong> — poster, German Conference for Bioinformatics, Hamburg, 2023; talk, Workshop for Data Structure in Bioinformatics, Delft, 2023</div>
+    </div>
+    <div class="pub">
+      <div><strong>Advanced Sequence Analysis with Python</strong> (high-performance Python) — course, Saarland University, 2023</div>
+    </div>
+    <div class="pub">
+      <div><strong>Metagenomics seminars</strong> — Saarland University, 2022 &middot; <strong>Introduction to Python Programming</strong> — Saarland University, 2022–2023</div>
+    </div>
+    <div class="pub">
+      <div><strong>Agentic SDLC</strong> — 3-day customer training for Hitachi High-Tech (sponsor-endorsed); 2-week course for SBI-FPT</div>
+    </div>
+  </section>
 
+  <section>
+    <h2>Recognition</h2>
+    <ul>
+      <li><strong>Hitachi High-Tech</strong> sponsor endorsement for a delivered 3-day training course and the POC that followed.</li>
+      <li><strong>Dream Project Incubator</strong> (MIT PhDs / Boston Global Forum), 2015 — selected for a 3-month residency in Boston.</li>
+      <li>Founder of <strong>Fab Lab USTH</strong> — grew a student club into a full university laboratory; the longest-running Fab Lab at a Vietnamese university.</li>
+    </ul>
+  </section>
 
+  <blockquote>Vietnamese naming: DANG is the family name.</blockquote>
 
-
-
-                
-              </article>
-            </div>
-          
-          
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      
-    
-  </body>
+
+</body>
 </html>
